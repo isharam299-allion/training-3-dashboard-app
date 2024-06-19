@@ -1,6 +1,6 @@
 import React from "react";
 import styled from "styled-components";
-import {ReactComponent as LogoSVG } from '../../logo.svg';
+import {ReactComponent as LogoSVG } from '../../assests/logo.svg';
 
 const StyledLogo = styled (LogoSVG)`
     height : 41px;
