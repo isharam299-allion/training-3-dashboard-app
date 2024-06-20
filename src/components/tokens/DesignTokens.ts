@@ -11,12 +11,12 @@ export const tokens = {
         bgColorSearchBar : '#ECF0F3',
         // Font Colors
         fontColorMenu : '#ABB5BA',
-        fontColorheading2 : '#303030',
+        fontColorHeading2 : '#303030',
         fontColorHeading3 : '#333333',
         fontColorNextBookAuthor : '#8A97A4',
         fontColorNextBookDuration : "#8998A9",
         fontColorPopularBookTitle : '#434C56',
-        fontColorPolularBookAuthor : '#8D96A8',
+        fontColorPopularBookAuthor : '#8D96A8',
         fontColorTopAuthor : '#434D56',
         fontColorParagraph : '#DCE0E5',
         fontColorUserName : '#212121',
@@ -28,7 +28,7 @@ export const tokens = {
     },
 
     fontSizes : {
-        fsExtraLarge40 : '40px',
+        fsExtraLarge40 : '30px',
         fsSemiLarge24 : '24px',
         fsLarge22 : '22px',
         fsLarge20 : '20px',
@@ -45,5 +45,10 @@ export const tokens = {
         semiBold : 600,
         bold : 700,
         extraBold : 800
+    },
+
+    letterSpacing : {
+        ls1 : '0.01em',
+        ls3 : '0.03em'
     }
 }
