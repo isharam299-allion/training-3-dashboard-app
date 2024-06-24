@@ -7,8 +7,8 @@ const StyledLogo = styled (LogoSVG)`
     width : 101px
 `;
 
-const Logo : React.FC = () => {
-    return <StyledLogo/>
-};
+const Logo : React.FC = () => (
+     <StyledLogo/>
+);
 
 export default Logo;
