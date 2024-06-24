@@ -17,7 +17,7 @@ interface PictureProps {
     altText : string;
 }
 
-// Get height of the book image based on the thumbnail image type
+// height of the book image based on the thumbnail image type
 const getThumbnailHeight = (type : IMAGE_TYPE) => {
     switch (type) {
         case IMAGE_TYPE.POPULAR_BOOK:
@@ -35,7 +35,7 @@ const getThumbnailHeight = (type : IMAGE_TYPE) => {
     }
 }
 
-// Get border radius of the image based on the thumbnail image type
+// border radius of the image based on the thumbnail image type
 const getImgBorderRadius = (type : IMAGE_TYPE) => {
     switch (type) {
         case IMAGE_TYPE.POPULAR_BOOK:

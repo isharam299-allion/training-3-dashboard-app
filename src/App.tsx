@@ -1,7 +1,7 @@
 import React from 'react';
 import './App.css';
 import { Heading2, Logo } from './components';
-import { GlobalStyles, Heading3, Hyperlink, PopularBookAuthor, PopularBookTitle } from './components/atoms/typography/Typography';
+import { GlobalStyles, Heading3, Hyperlink } from './components/atoms/typography/Typography';
 import { NEVER_EAT_ALONE } from './utilities/Book.data';
 import { IMAGE_TYPE, Thumbnail } from './components/atoms';
 import { AUTHOR_IMAGES, BOOK_IMAGES } from './assests/pictures';
