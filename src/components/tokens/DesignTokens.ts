@@ -4,7 +4,7 @@ export const tokens = {
         bgColorOrange :'#EB763C',
         bgColorGreen : '#1AA928',
         bgColorWhite : '#FFFFFF',
-        bgColorPage : '#C9CCCF',
+        bgColorPage : '#F9F9F9',
         bgColorLightGreen : '#E4FBE7',
         bgColorEllipse : '#C4C4C4',
         bgColorLanguageEllipse : '#D3F8D8',
