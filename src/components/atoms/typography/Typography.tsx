@@ -48,6 +48,7 @@ const PopularBookTitle = styled.h4`
     font-weight:  ${tokens.fontWeights.bold};
     line-height: 21.82px;
     text-align: center;
+    margin: 10px 0px 0px 0px;
 `;
 
 const PopularBookAuthor = styled.h5`
@@ -56,6 +57,7 @@ const PopularBookAuthor = styled.h5`
     font-weight: ${tokens.fontWeights.regular};
     line-height: 19.1px;
     text-align: center;
+    margin: 8px 0px 0px 0px;
 `;
 
 

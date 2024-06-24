@@ -1,11 +1,12 @@
 import {Author, CONAN_DOYLE, F_SCOTT_FITZGERALD, JOHN_GREEN, KEITH_FERRAZZI, MARKUS_ZUKAS, R_J_PALACIO, YUVAL_NOAH_HARARI } from "./Author.data";
 import { BOOK_IMAGES } from "../assests/pictures";
-interface Book {
+export interface Book {
     id : Number;
-    title : String;
+    title : string;
     author : Author;
-    desktopImg : String;
-    mobileImg : String;
+    desktopImg : string;
+    mobileImg : string;
+    altText : string | '';
 }
 
 
@@ -14,7 +15,8 @@ export const NEVER_EAT_ALONE : Book = {
     title: "Never Eat Alone",
     author: KEITH_FERRAZZI,
     desktopImg: BOOK_IMAGES.DESKTOP.BOOK_NEVER_EAT_ALONE,
-    mobileImg: BOOK_IMAGES.MOBILE.BOOK_NEVER_EAT_ALONE
+    mobileImg: BOOK_IMAGES.MOBILE.BOOK_NEVER_EAT_ALONE,
+    altText: ""
 }
 
 export const THE_GREAT_GASBY : Book = {
@@ -22,7 +24,8 @@ export const THE_GREAT_GASBY : Book = {
     title: "Great Gasby",
     author: F_SCOTT_FITZGERALD,
     desktopImg: BOOK_IMAGES.DESKTOP.BOOK_THE_GREAT_GASBY,
-    mobileImg: BOOK_IMAGES.MOBILE.BOOK_THE_GREAT_GASBY
+    mobileImg: BOOK_IMAGES.MOBILE.BOOK_THE_GREAT_GASBY,
+    altText: ""
 }
 
 export const SAPIENS : Book = {
@@ -30,7 +33,8 @@ export const SAPIENS : Book = {
     title: "Sapiens",
     author: YUVAL_NOAH_HARARI,
     desktopImg: BOOK_IMAGES.DESKTOP.BOOK_SAPIENS,
-    mobileImg: BOOK_IMAGES.MOBILE.BOOK_SAPIENS
+    mobileImg: BOOK_IMAGES.MOBILE.BOOK_SAPIENS,
+    altText: ""
 }
 
 
@@ -39,7 +43,8 @@ export const THE_BOOK_THEIF : Book = {
     title: "The Book Thief",
     author: MARKUS_ZUKAS,
     desktopImg: BOOK_IMAGES.DESKTOP.BOOK_THE_BOOK_THEIF,
-    mobileImg: BOOK_IMAGES.MOBILE.BOOK_THE_BOOK_THEIF
+    mobileImg: BOOK_IMAGES.MOBILE.BOOK_THE_BOOK_THEIF,
+    altText: ""
 }
 
 export const SHERLOCK_HOMES : Book = {
@@ -47,7 +52,8 @@ export const SHERLOCK_HOMES : Book = {
     title: "Sherlock Holmes",
     author: CONAN_DOYLE,
     desktopImg: BOOK_IMAGES.DESKTOP.BOOK_SHERLOCK_HOMES,
-    mobileImg: BOOK_IMAGES.MOBILE.BOOK_SHERLOCK_HOMES
+    mobileImg: BOOK_IMAGES.MOBILE.BOOK_SHERLOCK_HOMES,
+    altText: ""
 }
 
 export const FAULT_IN_OUR_STARS : Book = {
@@ -55,7 +61,8 @@ export const FAULT_IN_OUR_STARS : Book = {
     title: "Fault In Our Stars",
     author: JOHN_GREEN,
     desktopImg: BOOK_IMAGES.DESKTOP.BOOK_FAULT_IN_OUR_STARS,
-    mobileImg: BOOK_IMAGES.MOBILE.BOOK_FAULT_IN_OUR_STARS
+    mobileImg: BOOK_IMAGES.MOBILE.BOOK_FAULT_IN_OUR_STARS,
+    altText: ""
 }
 
 export const WONDER : Book = {
@@ -63,5 +70,6 @@ export const WONDER : Book = {
     title: "Wonder",
     author: R_J_PALACIO,
     desktopImg: BOOK_IMAGES.DESKTOP.BOOK_WONDER,
-    mobileImg: BOOK_IMAGES.MOBILE.BOOK_WONDER
+    mobileImg: BOOK_IMAGES.MOBILE.BOOK_WONDER,
+    altText: ""
 }
