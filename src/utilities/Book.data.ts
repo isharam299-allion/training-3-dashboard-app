@@ -7,6 +7,7 @@ export interface Book {
     desktopImg : string;
     mobileImg : string;
     altText : string | '';
+    duration : string;
 }
 
 
@@ -16,7 +17,8 @@ export const NEVER_EAT_ALONE : Book = {
     author: KEITH_FERRAZZI,
     desktopImg: BOOK_IMAGES.DESKTOP.BOOK_NEVER_EAT_ALONE,
     mobileImg: BOOK_IMAGES.MOBILE.BOOK_NEVER_EAT_ALONE,
-    altText: ""
+    altText: "",
+    duration: "02:20:03"
 }
 
 export const THE_GREAT_GASBY : Book = {
@@ -25,7 +27,8 @@ export const THE_GREAT_GASBY : Book = {
     author: F_SCOTT_FITZGERALD,
     desktopImg: BOOK_IMAGES.DESKTOP.BOOK_THE_GREAT_GASBY,
     mobileImg: BOOK_IMAGES.MOBILE.BOOK_THE_GREAT_GASBY,
-    altText: ""
+    altText: "",
+    duration: "02:20:03"
 }
 
 export const SAPIENS : Book = {
@@ -34,7 +37,8 @@ export const SAPIENS : Book = {
     author: YUVAL_NOAH_HARARI,
     desktopImg: BOOK_IMAGES.DESKTOP.BOOK_SAPIENS,
     mobileImg: BOOK_IMAGES.MOBILE.BOOK_SAPIENS,
-    altText: ""
+    altText: "",
+    duration: "02:20:03"
 }
 
 
@@ -44,7 +48,8 @@ export const THE_BOOK_THEIF : Book = {
     author: MARKUS_ZUKAS,
     desktopImg: BOOK_IMAGES.DESKTOP.BOOK_THE_BOOK_THEIF,
     mobileImg: BOOK_IMAGES.MOBILE.BOOK_THE_BOOK_THEIF,
-    altText: ""
+    altText: "",
+    duration: "02:20:03"
 }
 
 export const SHERLOCK_HOMES : Book = {
@@ -53,7 +58,8 @@ export const SHERLOCK_HOMES : Book = {
     author: CONAN_DOYLE,
     desktopImg: BOOK_IMAGES.DESKTOP.BOOK_SHERLOCK_HOMES,
     mobileImg: BOOK_IMAGES.MOBILE.BOOK_SHERLOCK_HOMES,
-    altText: ""
+    altText: "",
+    duration: "02:20:03"
 }
 
 export const FAULT_IN_OUR_STARS : Book = {
@@ -62,7 +68,8 @@ export const FAULT_IN_OUR_STARS : Book = {
     author: JOHN_GREEN,
     desktopImg: BOOK_IMAGES.DESKTOP.BOOK_FAULT_IN_OUR_STARS,
     mobileImg: BOOK_IMAGES.MOBILE.BOOK_FAULT_IN_OUR_STARS,
-    altText: ""
+    altText: "",
+    duration: "02:20:03"
 }
 
 export const WONDER : Book = {
@@ -71,5 +78,6 @@ export const WONDER : Book = {
     author: R_J_PALACIO,
     desktopImg: BOOK_IMAGES.DESKTOP.BOOK_WONDER,
     mobileImg: BOOK_IMAGES.MOBILE.BOOK_WONDER,
-    altText: ""
+    altText: "",
+    duration: "02:20:03"
 }

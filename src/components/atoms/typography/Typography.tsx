@@ -46,7 +46,7 @@ const PopularBookTitle = styled.h4`
     color : ${tokens.colors.fontColorPopularBookTitle};
     font-size: ${tokens.fontSizes.fsSemiSmall16};
     font-weight:  ${tokens.fontWeights.bold};
-    line-height: 21.82px;
+    line-height: ${tokens.lineHeights.lineHeight22};
     text-align: center;
     margin: 10px 0px 0px 0px;
 `;
@@ -55,10 +55,19 @@ const PopularBookAuthor = styled.h5`
     color : ${tokens.colors.fontColorPopularBookAuthor};
     font-size: ${tokens.fontSizes.fsExtraSmall14};
     font-weight: ${tokens.fontWeights.regular};
-    line-height: 19.1px;
+    line-height: ${tokens.lineHeights.lineHeight22};
     text-align: center;
     margin: 8px 0px 0px 0px;
 `;
 
+const TopAuthor = styled.h4`
+    font-size: ${tokens.fontSizes.fsSemiSmall16};
+    font-weight: ${tokens.fontWeights.semiBold};
+    line-height: 21.82px;
+    text-align: center;
+    margin: 15px 0px 0px 0px;
+    line-height : ${tokens.lineHeights.lineHeight22};
+`;
 
-export {GlobalStyles, Heading2, Heading3, Hyperlink, PopularBookTitle, PopularBookAuthor};
+
+export {GlobalStyles, Heading2, Heading3, Hyperlink, PopularBookTitle, PopularBookAuthor, TopAuthor};

@@ -44,6 +44,8 @@ const getImgBorderRadius = (type : IMAGE_TYPE) => {
         case IMAGE_TYPE.READ_NEXT_BOOK:
         case IMAGE_TYPE.PLAY_NEXT_BOOK:
             return '8px';
+        case IMAGE_TYPE.TOP_AUTHOR:
+            return '45px';
         default:
             return '0px';
     }
@@ -54,7 +56,7 @@ const StyledPicture = styled.picture<Pick<PictureProps, 'type'>>`
         width: auto;
         height: ${props => getThumbnailHeight(props.type)};
         border-radius: ${props => getImgBorderRadius(props.type)};
-        opacity: 0px;
+        object-fit: cover;
     }  
 `;
 

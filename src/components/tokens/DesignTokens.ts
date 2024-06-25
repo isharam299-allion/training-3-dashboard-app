@@ -50,5 +50,9 @@ export const tokens = {
     letterSpacing : {
         ls1 : '0.01em',
         ls3 : '0.03em'
+    },
+
+    lineHeights : {
+        lineHeight22 : '22px'
     }
 }
