@@ -1,9 +1,8 @@
 import React from "react";
 import styled from "styled-components";
 import { ICON_TYPE, Logo, StyledIconBackground, StyledInput, SvgIcon, Typography } from "../../atoms";
-import { SVG_COMPONENTS } from "../../../assests/svg-icons";
 import { SearchBox } from "../../molecules";
-import { tokens } from "../../tokens/DesignTokens";
+import { SvgFlagAssests, SvgIconAssests } from "../../../assests";
 
 const StyledHeader = styled.header`
     display : flex;
@@ -34,11 +33,11 @@ const Header : React.FC<HeaderProps> = ({onClickLogo, onClickUserIcon}) => (
         <StyledLanguageDiv>
             <Typography.Language>EN</Typography.Language>
             <StyledIconBackground iconType={ICON_TYPE.FLAG_ICON}>
-                <SvgIcon type={ICON_TYPE.FLAG_ICON} SvgComponent={SVG_COMPONENTS.UK_KLAG_ICON_SVG}/>
+                <SvgIcon type={ICON_TYPE.FLAG_ICON} SvgComponent={SvgFlagAssests.SVG_FLAGS.FLAG_UK_SVG}/>
             </StyledIconBackground>
         </StyledLanguageDiv>
         <StyledIconBackground iconType={ICON_TYPE.NOTIFICATION_ICON}>
-            <SvgIcon type={ICON_TYPE.NOTIFICATION_ICON} SvgComponent={SVG_COMPONENTS.NOTIFICATION_ICON_SVG}/>
+            <SvgIcon type={ICON_TYPE.NOTIFICATION_ICON} SvgComponent={SvgIconAssests.SVG_COMPONENTS.NOTIFICATION_ICON_SVG}/>
         </StyledIconBackground>
     </StyledHeader>
 );
