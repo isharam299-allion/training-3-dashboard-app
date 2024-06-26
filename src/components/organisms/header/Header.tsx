@@ -1,6 +1,6 @@
 import React from "react";
 import styled from "styled-components";
-import { ICON_TYPE, Logo, StyledIconBackground, StyledInput, SvgIcon, Typography, UserProfileImg } from "../../atoms";
+import { ICON_TYPE, Logo, StyledIconBackground, SvgIcon, Typography } from "../../atoms";
 import { SearchBox, UserMenu } from "../../molecules";
 import { SvgFlagAssests, SvgIconAssests } from "../../../assests";
 import { USER_THANH_PHAM } from "../../../utilities/User.data";
@@ -51,7 +51,7 @@ const Header : React.FC<HeaderProps> = ({onClickLogo, onClickUserIcon}) => (
             <StyledIconBackground iconType={ICON_TYPE.NOTIFICATION_ICON}>
                 <SvgIcon type={ICON_TYPE.NOTIFICATION_ICON} SvgComponent={SvgIconAssests.SVG_COMPONENTS.NOTIFICATION_ICON_SVG}/>
             </StyledIconBackground>
-            <UserMenu user={USER_THANH_PHAM} />
+            <UserMenu user={USER_THANH_PHAM} onClickUserProfile={onClickUserIcon} />
         </StyledUserMenuWrapper>
     </StyledHeader>
 );

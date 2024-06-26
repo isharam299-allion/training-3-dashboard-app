@@ -4,9 +4,11 @@ import { tokens } from "../../tokens/DesignTokens";
 import React from "react";
 import { ICON_TYPE, SvgIcon, Typography, UserProfileImg } from "../../atoms";
 import { SvgIconAssests } from "../../../assests";
+import { on } from "events";
 
 interface UserMenuProps {
     user : User
+    onClickUserProfile : () => void;
 }
 
 
@@ -31,10 +33,10 @@ const StyledWrapper = styled.div`
 
 
 
-const UserMenu : React.FC<UserMenuProps> = ({user}) => (
+const UserMenu : React.FC<UserMenuProps> = ({user , onClickUserProfile}) => (
     <StyledDiv>
         <StyledWrapper>
-        <UserProfileImg imgUrl={user.profileImg}/>
+        <UserProfileImg imgUrl={user.profileImg} onClickUserProfile={onClickUserProfile}/>
         <Typography.UserName>{user.name}</Typography.UserName>
         </StyledWrapper>
         <SvgIcon SvgComponent={SvgIconAssests.SVG_COMPONENTS.DOWN_SVG} type={ICON_TYPE.DOWN_ICON} />

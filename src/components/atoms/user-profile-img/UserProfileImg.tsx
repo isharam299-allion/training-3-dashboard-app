@@ -3,6 +3,7 @@ import { tokens } from "../../tokens/DesignTokens";
 
 interface UserProfileImgProps {
     imgUrl : string;
+    onClickUserProfile : () => void;
 }
 
 const StyledDiv = styled.div<Pick<UserProfileImgProps, 'imgUrl'>>`
@@ -17,8 +18,8 @@ const StyledDiv = styled.div<Pick<UserProfileImgProps, 'imgUrl'>>`
 `;
 
 
-const UserProfileImg : React.FC<UserProfileImgProps> = ({imgUrl}) => (
-    <StyledDiv imgUrl={imgUrl}/>
+const UserProfileImg : React.FC<UserProfileImgProps> = ({imgUrl , onClickUserProfile}) => (
+    <StyledDiv imgUrl={imgUrl} onClick={onClickUserProfile}/>
 );
 
 export {

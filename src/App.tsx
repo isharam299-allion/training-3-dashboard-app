@@ -6,15 +6,15 @@ import { Header, MainBookSection, MenuBar, UserBooksSection } from './components
 
 function App() {
   const [isMenuOpen , setMenuOPen] = useState(true);
-  const [isUserSectionOpen, setUserSectionOpen] = useState(false);
+  const [isUserSectionOpen, setUserSectionOpen] = useState(true);
   return (
     <>
     <GlobalStyles/>
     <Header onClickLogo={() => setMenuOPen(!isMenuOpen)}  
       onClickUserIcon={() => setUserSectionOpen(!isUserSectionOpen)}/>
     <MenuBar isMenuOpen={isMenuOpen}/>
-    <UserBooksSection/>
-    <MainBookSection/>
+    <UserBooksSection isUserSectionOpen={isUserSectionOpen}/>
+    <MainBookSection isMenuOpen={isMenuOpen} isUserSectionOpen={isUserSectionOpen}/>
     </>
   );
 }

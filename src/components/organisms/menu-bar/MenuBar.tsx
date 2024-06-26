@@ -1,6 +1,5 @@
 import styled from "styled-components";
 import { tokens } from "../../tokens/DesignTokens";
-import { IsOptional } from "prop-types";
 
     interface MenuBarProps {
         isMenuOpen : boolean;
