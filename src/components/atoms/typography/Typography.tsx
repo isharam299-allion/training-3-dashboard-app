@@ -63,11 +63,27 @@ const PopularBookAuthor = styled.h5`
 const TopAuthor = styled.h4`
     font-size: ${tokens.fontSizes.fsSemiSmall16};
     font-weight: ${tokens.fontWeights.semiBold};
-    line-height: 21.82px;
     text-align: center;
     margin: 15px 0px 0px 0px;
     line-height : ${tokens.lineHeights.lineHeight22};
 `;
 
+const Language = styled.h2`
+    font-size: ${tokens.fontSizes.fsLarge20};
+    font-weight: ${tokens.fontWeights.bold};
+    line-height: ${tokens.lineHeights.lineHeight28};
+    letter-spacing: ${tokens.letterSpacing.ls3};
+    text-align: left;
+`;
 
-export {GlobalStyles, Heading2, Heading3, Hyperlink, PopularBookTitle, PopularBookAuthor, TopAuthor};
+
+export {
+    GlobalStyles, 
+    Heading2, 
+    Heading3, 
+    Hyperlink, 
+    PopularBookTitle, 
+    PopularBookAuthor, 
+    TopAuthor, 
+    Language
+};

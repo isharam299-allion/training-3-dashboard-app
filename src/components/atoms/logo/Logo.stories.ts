@@ -10,10 +10,7 @@ const meta = {
     layout: 'centered',
   },
   tags: ['autodocs'],
-  argTypes: {
-    backgroundColor: { control: 'color' },
-  },
-  args: { onClick: fn() },
+  args: { onClickLogo: fn() },
 } satisfies Meta<typeof Logo>;
 
 export default meta;
@@ -21,6 +18,5 @@ type Story = StoryObj<typeof meta>;
 
 
 export const Logosvg: Story = {
-  args: {
-  },
-};
+  args: { 
+  }}

@@ -4,11 +4,17 @@ import {ReactComponent as LogoSVG } from '../../../assests/logo.svg';
 
 const StyledLogo = styled (LogoSVG)`
     height : 41px;
-    width : 101px
+    width : 101px;
+    z-index: 1000;
+    cursor: pointer;
 `;
 
-const Logo : React.FC = () => (
-     <StyledLogo/>
+interface LogoProps {
+    onClickLogo : () => void;
+}
+
+const Logo : React.FC<LogoProps> = ({onClickLogo}) => (
+     <StyledLogo onClick={onClickLogo}/>
 );
 
 export default Logo;

@@ -12,6 +12,7 @@ import {ReactComponent as ReadBooksSvgIcon}from './read-books-icon.svg';
 import {ReactComponent as ReadingBooksSvgIcon}from './reading-books-icon.svg';
 import {ReactComponent as SearchSvgIcon}from './search-icon.svg';
 import {ReactComponent as SettingSvgIcon}from './setting-icon.svg';
+import {ReactComponent as UkFlagSvgIcon}from './uk-flag.svg';
 
 
 export const SVG_COMPONENTS = {
@@ -28,5 +29,6 @@ export const SVG_COMPONENTS = {
     READ_BOOKS_ICON_SVG : ReadBooksSvgIcon,
     READING_BOOKS_ICON_SVG : ReadingBooksSvgIcon,
     SEARCH_ICON_SVG : SearchSvgIcon,
-    SETTING_ICON_SVG : SettingSvgIcon 
+    SETTING_ICON_SVG : SettingSvgIcon,
+    UK_KLAG_ICON_SVG : UkFlagSvgIcon
 }
