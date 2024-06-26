@@ -7,7 +7,8 @@ enum ICON_TYPE {
     PLAY_PAUSE_ICON,
     NEXT_BACK_ICON,
     NOTIFICATION_ICON,
-    FLAG_ICON
+    FLAG_ICON,
+    DOWN_ICON
 }
 
 const getIconSize = ( type : ICON_TYPE) => {
@@ -25,6 +26,8 @@ const getIconSize = ( type : ICON_TYPE) => {
         return '30px';
     case ICON_TYPE.FLAG_ICON:
         return '36px';
+    case ICON_TYPE.DOWN_ICON:
+        return '14px';
     default:
         return '0px';
    }
@@ -36,7 +39,7 @@ interface IconProps {
 }
 
 const StyledSvg = styled.svg<Pick<IconProps, 'type'>>`
-    height: ${props => getIconSize(props.type)};
+    height: ${props => props.type === ICON_TYPE.DOWN_ICON ? '8px' : getIconSize(props.type)};
     width: ${props => getIconSize(props.type)};
     display: block;
 `;

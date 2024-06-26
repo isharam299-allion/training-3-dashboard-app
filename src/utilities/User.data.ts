@@ -1,6 +1,6 @@
 import { UserAssests } from "../assests";
 
-interface User {
+export interface User {
     id : String;
     name : string;
     profileImg : string;

@@ -43,7 +43,7 @@ const TopAuthor : React.FC<AuthorProps> = ({author}) => (
                 mobileImgSrc={author.mobileImg} altText={author.altText} />
             </StyledThumbnail>
         </StyledThumbnailBorder>
-        <Typography.TopAuthor>{author.name}</Typography.TopAuthor>
+        <Typography.TopAuthorName>{author.name}</Typography.TopAuthorName>
     </StyledDiv>
 );
 

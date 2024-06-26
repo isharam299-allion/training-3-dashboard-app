@@ -60,7 +60,7 @@ const PopularBookAuthor = styled.h5`
     margin: 8px 0px 0px 0px;
 `;
 
-const TopAuthor = styled.h4`
+const TopAuthorName = styled.h4`
     font-size: ${tokens.fontSizes.fsSemiSmall16};
     font-weight: ${tokens.fontWeights.semiBold};
     text-align: center;
@@ -74,6 +74,15 @@ const Language = styled.h2`
     line-height: ${tokens.lineHeights.lineHeight28};
     letter-spacing: ${tokens.letterSpacing.ls3};
     text-align: left;
+    color : ${tokens.colors.fontColorUserName};
+`;
+
+const UserName = styled.h2`
+    font-size: ${tokens.fontSizes.fsSmall17};
+    font-weight: ${tokens.fontWeights.semiBold};
+    line-height: ${tokens.lineHeights.lineHeight23};
+    text-align: left;
+    color : ${tokens.colors.fontColorUserName};
 `;
 
 
@@ -84,6 +93,7 @@ export {
     Hyperlink, 
     PopularBookTitle, 
     PopularBookAuthor, 
-    TopAuthor, 
-    Language
+    TopAuthorName, 
+    Language,
+    UserName
 };

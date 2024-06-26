@@ -4,6 +4,7 @@ import {Thumbnail, IMAGE_TYPE} from "./thumbnail/Thumbnail";
 import { SvgIcon , ICON_TYPE } from "./icon/SvgIcon";
 import { StyledIconBackground } from "./icon/IconBackground";
 import { StyledInput } from "./input/SearchInput";
+import { UserProfileImg } from "./user-profile-img/UserProfileImg";
 
 export {
     Logo, 
@@ -13,5 +14,6 @@ export {
     SvgIcon , 
     ICON_TYPE , 
     StyledIconBackground,
-    StyledInput
+    StyledInput,
+    UserProfileImg
 }
