@@ -4,7 +4,6 @@ import { tokens } from "../../tokens/DesignTokens";
 import React from "react";
 import { ICON_TYPE, SvgIcon, Typography, UserProfileImg } from "../../atoms";
 import { SvgIconAssests } from "../../../assests";
-import { on } from "events";
 
 interface UserMenuProps {
     user : User
