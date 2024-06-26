@@ -22,6 +22,16 @@ const StyledLanguageDiv = styled.div`
 
 `;
 
+const StyledUserMenuWrapper = styled.div`
+    display : flex;
+    align-items: center;
+    justify-content : space-between;
+    gap: 20px;
+    height: 50px;
+    max-width: 313px;
+    z-index: 1000;
+`;
+
 interface HeaderProps {
     onClickLogo : () => void;
     onClickUserIcon : () => void;
@@ -37,11 +47,12 @@ const Header : React.FC<HeaderProps> = ({onClickLogo, onClickUserIcon}) => (
                 <SvgIcon type={ICON_TYPE.FLAG_ICON} SvgComponent={SvgFlagAssests.SVG_FLAGS.FLAG_UK_SVG}/>
             </StyledIconBackground>
         </StyledLanguageDiv>
-        <StyledIconBackground iconType={ICON_TYPE.NOTIFICATION_ICON}>
-            <SvgIcon type={ICON_TYPE.NOTIFICATION_ICON} SvgComponent={SvgIconAssests.SVG_COMPONENTS.NOTIFICATION_ICON_SVG}/>
-        </StyledIconBackground>
-        <UserMenu user={USER_THANH_PHAM} />
-        <UserProfileImg imgUrl={USER_THANH_PHAM.profileImg}/>
+        <StyledUserMenuWrapper>
+            <StyledIconBackground iconType={ICON_TYPE.NOTIFICATION_ICON}>
+                <SvgIcon type={ICON_TYPE.NOTIFICATION_ICON} SvgComponent={SvgIconAssests.SVG_COMPONENTS.NOTIFICATION_ICON_SVG}/>
+            </StyledIconBackground>
+            <UserMenu user={USER_THANH_PHAM} />
+        </StyledUserMenuWrapper>
     </StyledHeader>
 );
 

@@ -13,7 +13,7 @@ function App() {
     <Header onClickLogo={() => setMenuOPen(!isMenuOpen)}  
       onClickUserIcon={() => setUserSectionOpen(!isUserSectionOpen)}/>
     <MenuBar isMenuOpen={isMenuOpen}/>
-    {/* <UserBooksSection/> */}
+    <UserBooksSection/>
     <MainBookSection/>
     </>
   );

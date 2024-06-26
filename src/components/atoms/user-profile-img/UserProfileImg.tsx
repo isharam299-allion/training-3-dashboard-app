@@ -13,6 +13,7 @@ const StyledDiv = styled.div<Pick<UserProfileImgProps, 'imgUrl'>>`
     background-color: ${tokens.colors.bgColorWhite};
     background-size: cover;
     background-position: center;
+    cursor: pointer;
 `;
 
 
