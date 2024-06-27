@@ -1,8 +1,9 @@
 import styled from "styled-components";
 import { tokens } from "../../tokens/DesignTokens";
 import { MenuItem } from "../../molecules";
-import { SvgIconAssests } from "../../../assests";
+import { Images, SvgIconAssests } from "../../../assests";
 import { useState } from "react";
+import { SvgIcon } from "../../atoms";
 
     interface MenuBarProps {
         isMenuOpen : boolean;
@@ -31,7 +32,16 @@ import { useState } from "react";
         margin-right: 20px;
     `;
 
-
+    const StyledSvgImgWrapper = styled.div`
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: fixed;
+        bottom: 0px;
+        margin-left: 36px;
+        margin-right: 26px;
+        margin-bottom: 35px;
+    `; 
 
     const MenuBar : React.FC<MenuBarProps> = ({isMenuOpen}) => {
         const [activeIndex, setActiveIndex] = useState<number | null>(0);
@@ -84,6 +94,10 @@ import { useState } from "react";
                         ))
                     }
                 </StyledNav>
+                <StyledSvgImgWrapper>
+                    <Images.IMAGES.MENUBAR_IMG/>
+                </StyledSvgImgWrapper>
+                
             </StyledDiv>
         );
         
