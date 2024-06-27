@@ -6,7 +6,7 @@ interface MainSectioProps {
     isUserSectionOpen: boolean;
 }
 
-const StyledSection = styled.main<Pick<MainSectioProps, 'isMenuOpen' | 'isUserSectionOpen'>>`
+const StyledSection = styled.section<Pick<MainSectioProps, 'isMenuOpen' | 'isUserSectionOpen'>>`
     display: flex;
     flex-direction: column;
     height: 100vh;

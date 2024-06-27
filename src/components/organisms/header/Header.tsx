@@ -32,6 +32,15 @@ const StyledUserMenuWrapper = styled.div`
     z-index: 1000;
 `;
 
+const StyledSearchBoxWrapper = styled.div`
+    display : flex;
+    align-items: center;
+    justify-content : space-between;
+    gap: 190px;
+    height: 50px;
+    max-width: 775px;
+`;
+
 interface HeaderProps {
     onClickLogo : () => void;
     onClickUserIcon : () => void;
@@ -40,6 +49,7 @@ interface HeaderProps {
 const Header : React.FC<HeaderProps> = ({onClickLogo, onClickUserIcon}) => (
     <StyledHeader>
         <Logo onClickLogo={onClickLogo}/>
+        <StyledSearchBoxWrapper>
         <SearchBox/>
         <StyledLanguageDiv>
             <Typography.Language>EN</Typography.Language>
@@ -47,6 +57,7 @@ const Header : React.FC<HeaderProps> = ({onClickLogo, onClickUserIcon}) => (
                 <SvgIcon type={ICON_TYPE.FLAG_ICON} SvgComponent={SvgFlagAssests.SVG_FLAGS.FLAG_UK_SVG}/>
             </StyledIconBackground>
         </StyledLanguageDiv>
+        </StyledSearchBoxWrapper>
         <StyledUserMenuWrapper>
             <StyledIconBackground iconType={ICON_TYPE.NOTIFICATION_ICON}>
                 <SvgIcon type={ICON_TYPE.NOTIFICATION_ICON} SvgComponent={SvgIconAssests.SVG_COMPONENTS.NOTIFICATION_ICON_SVG}/>

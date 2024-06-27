@@ -7,7 +7,7 @@ import { SVG_COMPONENTS } from "../../../assests/svg-icons";
 const StyledDiv = styled.div`
     display: flex;
     height: 50px;
-    max-width: 492px;
+    width: 492px;
     border-radius: 30px;
     background-color: ${tokens.colors.bgColorSearchBar};
     justify-contentL: space-between;

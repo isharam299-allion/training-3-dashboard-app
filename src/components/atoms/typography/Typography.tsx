@@ -5,7 +5,7 @@ const GlobalStyles = createGlobalStyle`
 
     body {
         font-family : ${tokens.fontFamily};
-        background-color : ${tokens.colors.bgColorPage};    
+        background-color : ${tokens.colors.bgColorPage};  
     }
 
     * {
@@ -85,6 +85,20 @@ const UserName = styled.h2`
     color : ${tokens.colors.fontColorUserName};
 `;
 
+const NavLink = styled.a<{isActive: boolean}>`
+    font-size: ${tokens.fontSizes.fsExtraSmall14};
+    font-weight: ${tokens.fontWeights.semiBold};
+    line-height: ${tokens.lineHeights.lineHeight19};
+    text-align: left;
+    color : ${props => props.isActive ? tokens.colors.bgColorWhite : tokens.colors.fontColorMenu};
+    text-decoration: none;
+    cursor : pointer;
+    &&: hover {
+        text-decoration: underline;
+    }
+`;
+
+
 
 export {
     GlobalStyles, 
@@ -95,5 +109,6 @@ export {
     PopularBookAuthor, 
     TopAuthorName, 
     Language,
-    UserName
+    UserName,
+    NavLink
 };

@@ -9,12 +9,12 @@ function App() {
   const [isUserSectionOpen, setUserSectionOpen] = useState(true);
   return (
     <>
-    <GlobalStyles/>
-    <Header onClickLogo={() => setMenuOPen(!isMenuOpen)}  
-      onClickUserIcon={() => setUserSectionOpen(!isUserSectionOpen)}/>
-    <MenuBar isMenuOpen={isMenuOpen}/>
-    <UserBooksSection isUserSectionOpen={isUserSectionOpen}/>
-    <MainBookSection isMenuOpen={isMenuOpen} isUserSectionOpen={isUserSectionOpen}/>
+      <GlobalStyles/>
+      <Header onClickLogo={() => setMenuOPen(!isMenuOpen)}  
+        onClickUserIcon={() => setUserSectionOpen(!isUserSectionOpen)}/>
+      <MenuBar isMenuOpen={isMenuOpen}/>
+      <UserBooksSection isUserSectionOpen={isUserSectionOpen}/>
+      <MainBookSection isMenuOpen={isMenuOpen} isUserSectionOpen={isUserSectionOpen}/>
     </>
   );
 }

@@ -53,8 +53,9 @@ export const tokens = {
     },
 
     lineHeights : {
+        lineHeight19 : '19px',
         lineHeight22 : '22px',
         lineHeight28 : '28px',
-        lineHeight23 : '23px'
+        lineHeight23 : '23px',
     }
 }
