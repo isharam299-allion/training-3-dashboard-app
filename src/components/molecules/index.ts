@@ -3,11 +3,13 @@ import { TopAuthor } from "./top-author/TopAuthor";
 import { SearchBox } from "./search-box/SearchBox";
 import { UserMenu } from "./user-menu/UserMenu";
 import { MenuItem } from "./menu-item/MenuItem";
+import { TrendingBookBlock } from "./trending-book-block/TrendingBookBlock";
 
 export {
     PopularBook ,
     TopAuthor,
     SearchBox,
     UserMenu,
-    MenuItem
+    MenuItem,
+    TrendingBookBlock
 }

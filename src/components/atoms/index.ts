@@ -5,6 +5,7 @@ import { SvgIcon , ICON_TYPE } from "./icon/SvgIcon";
 import { StyledIconBackground } from "./icon/IconBackground";
 import { StyledInput } from "./input/SearchInput";
 import { UserProfileImg } from "./user-profile-img/UserProfileImg";
+import { Button } from "./button/Button";
 
 export {
     Logo, 
@@ -15,5 +16,6 @@ export {
     ICON_TYPE , 
     StyledIconBackground,
     StyledInput,
-    UserProfileImg
+    UserProfileImg,
+    Button
 }

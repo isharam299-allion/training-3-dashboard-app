@@ -28,7 +28,7 @@ export const tokens = {
     },
 
     fontSizes : {
-        fsExtraLarge40 : '30px',
+        fsExtraLarge30 : '30px',
         fsSemiLarge24 : '24px',
         fsLarge22 : '22px',
         fsLarge20 : '20px',
@@ -38,7 +38,10 @@ export const tokens = {
         fsExtraSmall14 : '14px',
     },
 
-    fontFamily :'Nunito',
+    fontFamily : {
+        fontFamilyNunito : 'Nunito',
+        fontFamilyLeMondeLivre : 'LeMonde Livre',
+    },
 
     fontWeights : {
         regular : 400,
@@ -49,13 +52,17 @@ export const tokens = {
 
     letterSpacing : {
         ls1 : '0.01em',
-        ls3 : '0.03em'
+        ls2 : '0.02em',
+        ls3 : '0.03em',
+        ls5 : '0.05em'
     },
 
     lineHeights : {
         lineHeight19 : '19px',
         lineHeight22 : '22px',
-        lineHeight28 : '28px',
         lineHeight23 : '23px',
+        lineHeight24 : '24px',
+        lineHeight28 : '28px',
+        lineHeight40 : '40px',
     }
 }

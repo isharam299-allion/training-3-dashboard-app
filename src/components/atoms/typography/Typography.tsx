@@ -16,6 +16,17 @@ const GlobalStyles = createGlobalStyle`
     
 `;
 
+const Heading1 = styled.h1`
+    font-family: ${tokens.fontFamily.fontFamilyLeMondeLivre};
+    color : ${tokens.colors.bgColorWhite};
+    font-size: ${tokens.fontSizes.fsExtraLarge30};
+    font-weight: ${tokens.fontWeights.extraBold};
+    line-height: ${tokens.lineHeights.lineHeight40};
+    letter-spacing: ${tokens.letterSpacing.ls5};
+    text-align: left;
+    margin: 0px;
+`;
+
 const Heading2 = styled.h2`
     color : ${tokens.colors.fontColorHeading2};
     font-size: ${tokens.fontSizes.fsSemiLarge24};
@@ -98,17 +109,28 @@ const NavLink = styled.a<{isActive: boolean}>`
     }
 `;
 
+const HeadingParagraph = styled.p`
+    font-size: ${tokens.fontSizes.fsMedium18};
+    font-weight: ${tokens.fontWeights.regular};
+    line-height: ${tokens.lineHeights.lineHeight24};
+    color : ${tokens.colors.fontColorParagraph};
+    text-align: left;
+    margin: 20px 0px;
+    padding: 0;
+`;
 
 
 export {
-    GlobalStyles, 
+    GlobalStyles,
+    Heading1, 
     Heading2, 
-    Heading3, 
+    Heading3,
+    HeadingParagraph, 
     Hyperlink, 
     PopularBookTitle, 
     PopularBookAuthor, 
     TopAuthorName, 
     Language,
     UserName,
-    NavLink
+    NavLink,
 };
