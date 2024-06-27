@@ -1,5 +1,5 @@
 import { AUTHOR_IMAGES } from "../assests/pictures";
-export interface Author {
+interface Author {
     id : Number;
     name : String;
     desktopImg : string;
@@ -7,7 +7,7 @@ export interface Author {
     altText : string | '';
 }
 
-export const MARKUS_ZUKAS : Author = {
+const MARKUS_ZUKAS : Author = {
     id: 1000,
     name: "Markus Zukas",
     desktopImg: AUTHOR_IMAGES.DESKTOP.AUTHOR_MARKUS_ZUKAS,
@@ -15,7 +15,7 @@ export const MARKUS_ZUKAS : Author = {
     altText: ""
 }
 
-export const KEITH_FERRAZZI : Author = {
+ const KEITH_FERRAZZI : Author = {
     id: 1001,
     name: "Keith Ferrazzi",
     desktopImg: '',
@@ -23,7 +23,7 @@ export const KEITH_FERRAZZI : Author = {
     altText: ""
 }
 
-export const F_SCOTT_FITZGERALD : Author = {
+const F_SCOTT_FITZGERALD : Author = {
     id: 1002,
     name: "F.Scott Fitzgerald",
     desktopImg: '',
@@ -31,7 +31,7 @@ export const F_SCOTT_FITZGERALD : Author = {
     altText: ""
 }
 
-export const YUVAL_NOAH_HARARI : Author = {
+const YUVAL_NOAH_HARARI : Author = {
     id: 1003,
     name: "Yuval Noah Harari",
     desktopImg: AUTHOR_IMAGES.DESKTOP.AUTHOR_YUVAL_NOAH_HARARI,
@@ -39,7 +39,7 @@ export const YUVAL_NOAH_HARARI : Author = {
     altText: ""
 }
 
-export const CONAN_DOYLE : Author = {
+const CONAN_DOYLE : Author = {
     id: 1004,
     name: "Conan Doyle",
     desktopImg: '',
@@ -47,7 +47,7 @@ export const CONAN_DOYLE : Author = {
     altText: ""
 }
 
-export const JOHN_GREEN: Author = {
+const JOHN_GREEN: Author = {
     id: 1005,
     name: "John Green",
     desktopImg: AUTHOR_IMAGES.DESKTOP.AUTHOR_JOHN_GREEN,
@@ -55,7 +55,7 @@ export const JOHN_GREEN: Author = {
     altText: ""
 }
 
-export const DAN_BROWN : Author = {
+const DAN_BROWN : Author = {
     id: 1006,
     name: "Dan Brown",
     desktopImg: AUTHOR_IMAGES.DESKTOP.AUTHOR_DAN_BROWN,
@@ -63,7 +63,7 @@ export const DAN_BROWN : Author = {
     altText: ""
 }
 
-export const J_K_ROWLING : Author = {
+const J_K_ROWLING : Author = {
     id: 1007,
     name: "J.K.Rowling",
     desktopImg: AUTHOR_IMAGES.DESKTOP.AUTHOR_J_K_ROWLING,
@@ -71,10 +71,34 @@ export const J_K_ROWLING : Author = {
     altText: ""
 }
 
-export const R_J_PALACIO : Author = {
+const R_J_PALACIO : Author = {
     id: 1008,
     name: "R.J.Palacio",
     desktopImg: AUTHOR_IMAGES.DESKTOP.AUTHOR_R_J_PALACIO,
     mobileImg: AUTHOR_IMAGES.MOBILE.AUTHOR_R_J_PALACIO,
     altText: ""
+}
+
+const TOP_AUTHORS : Author[] = [
+    MARKUS_ZUKAS,
+    DAN_BROWN,
+    JOHN_GREEN,
+    YUVAL_NOAH_HARARI,
+    J_K_ROWLING,
+    R_J_PALACIO
+];
+
+export type {Author}
+
+export {
+    R_J_PALACIO,
+    J_K_ROWLING,
+    DAN_BROWN,
+    CONAN_DOYLE,
+    F_SCOTT_FITZGERALD,
+    JOHN_GREEN,
+    KEITH_FERRAZZI,
+    MARKUS_ZUKAS,
+    YUVAL_NOAH_HARARI,
+    TOP_AUTHORS
 }

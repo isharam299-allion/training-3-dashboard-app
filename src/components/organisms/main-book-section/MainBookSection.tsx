@@ -1,6 +1,10 @@
 import styled from "styled-components";
-import { Heading3 } from "../../atoms/typography/Typography";
 import { TrendingBookBlock } from "../../molecules";
+import { PopularBookBlock } from "../popular-books-block/PopularBookBlock";
+import { POPULAR_BOOKS } from "../../../utilities/Book.data";
+import { TopAuthorBlock } from "../top-authors-block/TopAuthorBlock";
+import { TOP_AUTHORS } from "../../../utilities/Author.data";
+import { tokens } from "../../tokens/DesignTokens";
 
 interface MainSectioProps {
     isMenuOpen : boolean;
@@ -17,11 +21,18 @@ const StyledSection = styled.section<Pick<MainSectioProps, 'isMenuOpen' | 'isUse
     transition: margin 0.3s ease;
 `;
 
+const Separator = styled.div`
+    border: 1px solid ${tokens.colors.separatorColor};
+    height : 1px;
+    width : 100%;
+`;
 
 const MainBookSection : React.FC<MainSectioProps> = ({isMenuOpen, isUserSectionOpen}) => (
     <StyledSection isMenuOpen={isMenuOpen} isUserSectionOpen={isUserSectionOpen}>
         <TrendingBookBlock/>
-        <Heading3>Top Books</Heading3>
+        <PopularBookBlock bookList={POPULAR_BOOKS}/>
+        <Separator/>
+        <TopAuthorBlock  authorList={TOP_AUTHORS}/>
     </StyledSection>
 );
 

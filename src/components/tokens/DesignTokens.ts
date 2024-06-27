@@ -24,7 +24,10 @@ export const tokens = {
         fontColorPlaceHolder : '#B2BAC8',
         // StrokeColors
         strokeColorGreen : '#27A857',
-        strokeColorLightGreen : '#D6F5E1'        
+        strokeColorLightGreen : '#D6F5E1',
+        
+        //Separator color
+        separatorColor: '#E0E7EB',
     },
 
     fontSizes : {
@@ -63,6 +66,7 @@ export const tokens = {
         lineHeight23 : '23px',
         lineHeight24 : '24px',
         lineHeight28 : '28px',
+        lineHeight32 : '32px',
         lineHeight40 : '40px',
     }
 }

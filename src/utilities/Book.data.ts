@@ -1,6 +1,6 @@
 import {Author, CONAN_DOYLE, F_SCOTT_FITZGERALD, JOHN_GREEN, KEITH_FERRAZZI, MARKUS_ZUKAS, R_J_PALACIO, YUVAL_NOAH_HARARI } from "./Author.data";
 import { BOOK_IMAGES } from "../assests/pictures";
-export interface Book {
+interface Book {
     id : Number;
     title : string;
     author : Author;
@@ -11,7 +11,7 @@ export interface Book {
 }
 
 
-export const NEVER_EAT_ALONE : Book = {
+const NEVER_EAT_ALONE : Book = {
     id: 1000,
     title: "Never Eat Alone",
     author: KEITH_FERRAZZI,
@@ -21,7 +21,7 @@ export const NEVER_EAT_ALONE : Book = {
     duration: "02:20:03"
 }
 
-export const THE_GREAT_GASBY : Book = {
+const THE_GREAT_GASBY : Book = {
     id: 1001,
     title: "Great Gasby",
     author: F_SCOTT_FITZGERALD,
@@ -31,7 +31,7 @@ export const THE_GREAT_GASBY : Book = {
     duration: "02:20:03"
 }
 
-export const SAPIENS : Book = {
+const SAPIENS : Book = {
     id: 1000,
     title: "Sapiens",
     author: YUVAL_NOAH_HARARI,
@@ -42,7 +42,7 @@ export const SAPIENS : Book = {
 }
 
 
-export const THE_BOOK_THEIF : Book = {
+const THE_BOOK_THEIF : Book = {
     id: 1002,
     title: "The Book Thief",
     author: MARKUS_ZUKAS,
@@ -52,7 +52,7 @@ export const THE_BOOK_THEIF : Book = {
     duration: "02:20:03"
 }
 
-export const SHERLOCK_HOMES : Book = {
+const SHERLOCK_HOMES : Book = {
     id: 1003,
     title: "Sherlock Holmes",
     author: CONAN_DOYLE,
@@ -62,7 +62,7 @@ export const SHERLOCK_HOMES : Book = {
     duration: "02:20:03"
 }
 
-export const FAULT_IN_OUR_STARS : Book = {
+const FAULT_IN_OUR_STARS : Book = {
     id: 1003,
     title: "Fault In Our Stars",
     author: JOHN_GREEN,
@@ -72,7 +72,7 @@ export const FAULT_IN_OUR_STARS : Book = {
     duration: "02:20:03"
 }
 
-export const WONDER : Book = {
+const WONDER : Book = {
     id: 1003,
     title: "Wonder",
     author: R_J_PALACIO,
@@ -81,3 +81,26 @@ export const WONDER : Book = {
     altText: "",
     duration: "02:20:03"
 }
+
+const POPULAR_BOOKS : Book[] = [
+    NEVER_EAT_ALONE,
+    THE_GREAT_GASBY,
+    SAPIENS,
+    THE_BOOK_THEIF,
+    SHERLOCK_HOMES
+]
+
+export {
+    CONAN_DOYLE,
+    FAULT_IN_OUR_STARS,
+    WONDER,
+    SHERLOCK_HOMES,
+    THE_BOOK_THEIF,
+    THE_GREAT_GASBY,
+    SAPIENS,
+    NEVER_EAT_ALONE,
+    POPULAR_BOOKS
+};
+
+export type { Book };
+

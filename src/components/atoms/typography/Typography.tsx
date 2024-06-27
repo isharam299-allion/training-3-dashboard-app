@@ -31,9 +31,10 @@ const Heading2 = styled.h2`
     color : ${tokens.colors.fontColorHeading2};
     font-size: ${tokens.fontSizes.fsSemiLarge24};
     font-weight: ${tokens.fontWeights.bold};
-    line-height: 32.74px;
     letter-spacing: ${tokens.letterSpacing.ls1};
+    line-height: ${tokens.lineHeights.lineHeight32};
     text-align: left;
+    margin: 0px;
 `;
 
 const Heading3 = styled.h3`
