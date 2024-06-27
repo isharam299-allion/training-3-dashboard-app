@@ -1,10 +1,12 @@
 import styled from "styled-components";
-import { TrendingBookBlock } from "../../molecules";
+import { ReadInfoBlock, TrendingBookBlock } from "../../molecules";
 import { PopularBookBlock } from "../popular-books-block/PopularBookBlock";
 import { POPULAR_BOOKS } from "../../../utilities/Book.data";
 import { TopAuthorBlock } from "../top-authors-block/TopAuthorBlock";
 import { TOP_AUTHORS } from "../../../utilities/Author.data";
 import { tokens } from "../../tokens/DesignTokens";
+import { SvgIconAssests } from "../../../assests";
+import { ReadInfoProps } from "../../molecules/read-info/ReadInfoBlock";
 
 interface MainSectioProps {
     isMenuOpen : boolean;
@@ -27,12 +29,46 @@ const Separator = styled.div`
     width : 100%;
 `;
 
+const ReadInfosWrapper = styled.div`
+    display: flex;
+    width : 100%;
+    justify-content: space-between;
+    align-items: center;
+`;
+
+
+const readinfoList : ReadInfoProps[] = [
+    {
+        count: "20",
+        title: "Read Books",
+        icon: SvgIconAssests.SVG_COMPONENTS.READ_BOOKS_ICON_SVG
+    },
+    {
+        count: "20",
+        title: "Authors",
+        icon: SvgIconAssests.SVG_COMPONENTS.AUTHORS_SVG
+    },
+    {
+        count: "5",
+        title: "Reading Books",
+        icon: SvgIconAssests.SVG_COMPONENTS.READING_BOOKS_ICON_SVG
+    }
+]
+
 const MainBookSection : React.FC<MainSectioProps> = ({isMenuOpen, isUserSectionOpen}) => (
     <StyledSection isMenuOpen={isMenuOpen} isUserSectionOpen={isUserSectionOpen}>
         <TrendingBookBlock/>
         <PopularBookBlock bookList={POPULAR_BOOKS}/>
         <Separator/>
         <TopAuthorBlock  authorList={TOP_AUTHORS}/>
+        <ReadInfosWrapper>
+        {
+            readinfoList.map((info, index) => (
+                <ReadInfoBlock count={info.count} title={info.title} icon={info.icon} />
+            ))
+        }
+        
+        </ReadInfosWrapper>
     </StyledSection>
 );
 

@@ -32,7 +32,7 @@ const Heading2 = styled.h2`
     font-size: ${tokens.fontSizes.fsSemiLarge24};
     font-weight: ${tokens.fontWeights.bold};
     letter-spacing: ${tokens.letterSpacing.ls1};
-    line-height: ${tokens.lineHeights.lineHeight32};
+    line-height: ${tokens.lineHeights.lineHeight33};
     text-align: left;
     margin: 0px;
 `;
@@ -120,6 +120,26 @@ const HeadingParagraph = styled.p`
     padding: 0;
 `;
 
+const ReadInfoCount = styled.h2`
+    color : ${tokens.colors.fontColorHeading2};
+    font-size: ${tokens.fontSizes.fsSemiLarge24};
+    font-weight: ${tokens.fontWeights.bold};
+    line-height: ${tokens.lineHeights.lineHeight33};
+    text-align: left;
+    margin: 0px;
+`;
+
+const ReadInfoTitle = styled.h3`
+    color : ${tokens.colors.fontColorNextBookAuthor};
+    font-size: ${tokens.fontSizes.fsSmall17};
+    font-weight: ${tokens.fontWeights.regular};
+    line-height: ${tokens.lineHeights.lineHeight23};
+    text-align: left;
+    margin: 0px;
+`;
+
+
+
 
 export {
     GlobalStyles,
@@ -134,4 +154,6 @@ export {
     Language,
     UserName,
     NavLink,
+    ReadInfoCount,
+    ReadInfoTitle
 };

@@ -66,7 +66,7 @@ export const tokens = {
         lineHeight23 : '23px',
         lineHeight24 : '24px',
         lineHeight28 : '28px',
-        lineHeight32 : '32px',
+        lineHeight33 : '33px',
         lineHeight40 : '40px',
     }
 }
