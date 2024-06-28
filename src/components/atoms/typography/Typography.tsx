@@ -138,8 +138,32 @@ const ReadInfoTitle = styled.h3`
     margin: 0px;
 `;
 
+const NextBookTitle = styled.h4`
+    color : ${tokens.colors.fontColorHeading3};
+    font-size: ${tokens.fontSizes.fsSemiSmall16};
+    font-weight:  ${tokens.fontWeights.bold};
+    line-height: ${tokens.lineHeights.lineHeight22};
+    text-align: left;
+    margin: 0px;
+`;
 
+const NextBookAuthor = styled.h5`
+    color : ${tokens.colors.fontColorNextBookAuthor};
+    font-size: ${tokens.fontSizes.fsExtraSmall14};
+    font-weight: ${tokens.fontWeights.regular};
+    line-height: ${tokens.lineHeights.lineHeight19};
+    text-align: left;
+    margin: 0px;
+`;
 
+const NextBookDuration = styled.h5`
+    color : ${tokens.colors.fontColorNextBookDuration};
+    font-size: ${tokens.fontSizes.fsExtraSmall14};
+    font-weight: ${tokens.fontWeights.regular};
+    line-height: ${tokens.lineHeights.lineHeight19};
+    text-align: right;
+    margin: 0px;
+`;
 
 export {
     GlobalStyles,
@@ -155,5 +179,8 @@ export {
     UserName,
     NavLink,
     ReadInfoCount,
-    ReadInfoTitle
+    ReadInfoTitle,
+    NextBookTitle,
+    NextBookAuthor,
+    NextBookDuration
 };

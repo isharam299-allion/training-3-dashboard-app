@@ -5,6 +5,7 @@ import { UserMenu } from "./user-menu/UserMenu";
 import { MenuItem } from "./menu-item/MenuItem";
 import { TrendingBookBlock } from "./trending-book-block/TrendingBookBlock";
 import { ReadInfoBlock } from "./read-info/ReadInfoBlock";
+import { NextBook } from "./next-book/NextBook";
 
 export {
     PopularBook ,
@@ -13,5 +14,6 @@ export {
     UserMenu,
     MenuItem,
     TrendingBookBlock,
-    ReadInfoBlock
+    ReadInfoBlock,
+    NextBook
 }
