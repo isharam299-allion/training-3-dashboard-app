@@ -1,7 +1,7 @@
 import styled from "styled-components";
 import { tokens } from "../../tokens/DesignTokens";
 import { Author } from "../../../utilities/Author.data";
-import { IMAGE_TYPE, Thumbnail, Typography } from "../../atoms";
+import { IMAGE_TYPE, Thumbnail, ThumbnailBorder, Typography } from "../../atoms";
 
 const StyledDiv = styled.div`
     display : flex;
@@ -21,15 +21,7 @@ const StyledThumbnail = styled.div`
     align-items: center;
 `;
 
-const StyledThumbnailBorder = styled.div`
-    display: flex;
-    width: 80px;
-    height: 80px;
-    border-radius: 50%;
-    border: 2px solid ${tokens.colors.strokeColorGreen};
-    justify-content: center;
-    align-items: center;
-`;
+
 
 interface AuthorProps {
     author : Author;
@@ -37,12 +29,12 @@ interface AuthorProps {
 
 const TopAuthor : React.FC<AuthorProps> = ({author}) => (
     <StyledDiv>
-        <StyledThumbnailBorder>
+        <ThumbnailBorder imageType={IMAGE_TYPE.TOP_AUTHOR}>
             <StyledThumbnail>
                 <Thumbnail type={IMAGE_TYPE.TOP_AUTHOR} desktopImgSrc={author.desktopImg} 
                 mobileImgSrc={author.mobileImg} altText={author.altText} />
             </StyledThumbnail>
-        </StyledThumbnailBorder>
+        </ThumbnailBorder>
         <Typography.TopAuthorName>{author.name}</Typography.TopAuthorName>
     </StyledDiv>
 );

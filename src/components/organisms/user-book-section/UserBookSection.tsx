@@ -1,9 +1,10 @@
 import styled from "styled-components";
 import { tokens } from "../../tokens/DesignTokens";
 import React from "react";
-import { NextBook, WeekReadBooksBlock } from "../../molecules";
+import { NextBook, PlayBooksBlock, WeekReadBooksBlock } from "../../molecules";
 import { FAULT_IN_OUR_STARS, NEVER_EAT_ALONE, THE_BOOK_THEIF } from "../../../utilities/Book.data";
 import { Typography } from "../../atoms";
+import { USER_THANH_PHAM } from "../../../utilities/User.data";
 
 interface UserBookSectionProps {
     isUserSectionOpen : boolean;
@@ -26,7 +27,7 @@ const StyledSection = styled.aside<Pick<UserBookSectionProps, 'isUserSectionOpen
 const Container = styled.div`
     display: flex;
     flex-direction: column;
-    margin: 100px 33px 35px 32px;
+    margin: auto 33px 35px 32px;
 `;
 
 const BookWrapper = styled.div`
@@ -41,6 +42,7 @@ const BookWrapper = styled.div`
 const UserBooksSection : React.FC<UserBookSectionProps> = ({isUserSectionOpen}) => (
     <StyledSection isUserSectionOpen={isUserSectionOpen}>
         <Container>
+            <PlayBooksBlock readingBooks={USER_THANH_PHAM.readingBooks}/>
             <Typography.Heading3>Next Book</Typography.Heading3>
             <BookWrapper>
                 <NextBook  book={FAULT_IN_OUR_STARS}/>

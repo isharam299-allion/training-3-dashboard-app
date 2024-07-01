@@ -1,8 +1,7 @@
 import styled from "styled-components";
 import { tokens } from "../../tokens/DesignTokens";
 import React from "react";
-import { ICON_TYPE, ProgressCircle, StyledIconBackground, SvgIcon, Typography } from "../../atoms";
-import { SvgIconAssests } from "../../../assests";
+import { ProgressCircle, Typography } from "../../atoms";
 import { IMAGES } from "../../../assests/images";
 
 interface WeekReadBooksProps {
@@ -44,7 +43,7 @@ const WeekReadBooksBlock : React.FC<WeekReadBooksProps> =({readingCount, readCou
                 <IMAGES.WEEK_READ_BOOKS_IMG/>
             </StyledSvgImgWrapper> 
         </TitleWrapper>
-       <ProgressCircle rotation={readCount/readingCount} size={70} strokeSize={5}>
+       <ProgressCircle progressFactor={readCount/readingCount} size={70} strokeSize={5}>
             <Typography.WeekBookCount>{readCount}/{readingCount}</Typography.WeekBookCount>
        </ProgressCircle>
     </StyledDiv>

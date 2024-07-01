@@ -23,7 +23,7 @@ const getThumbnailHeight = (type : IMAGE_TYPE) => {
         case IMAGE_TYPE.POPULAR_BOOK:
             return '140px';
         case IMAGE_TYPE.PLAY_BOOK:
-            return '144px';
+            return '136px';
         case IMAGE_TYPE.READ_NEXT_BOOK:
             return '70px';
         case IMAGE_TYPE.PLAY_NEXT_BOOK:

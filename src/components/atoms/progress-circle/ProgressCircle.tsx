@@ -2,12 +2,12 @@ import styled from "styled-components";
 import { tokens } from "../../tokens/DesignTokens";
 
 interface ProgressCircleProps {
-   rotation : number;
+   progressFactor : number;
    size : number;
    strokeSize : number;
 }
 
-const ProgressCircle = styled.div<Pick<ProgressCircleProps, 'size' |'strokeSize'| 'rotation'>>`
+const ProgressCircle = styled.div<Pick<ProgressCircleProps, 'size' |'strokeSize'| 'progressFactor'>>`
     width: ${props =>props.size}px;
     height: ${props =>props.size}px;
     border-radius: 50%;
@@ -20,8 +20,8 @@ const ProgressCircle = styled.div<Pick<ProgressCircleProps, 'size' |'strokeSize'
     &::before {
         content: '';
         position: absolute;
-        top: 0;
-        left: 0;
+        top: -${props =>props.strokeSize}px;
+        left: -${props =>props.strokeSize}px;
         width: 100%;
         height: 100%;
         border-radius: 50%;
@@ -31,15 +31,15 @@ const ProgressCircle = styled.div<Pick<ProgressCircleProps, 'size' |'strokeSize'
     &::after {
         content: '';
         position: absolute;
-        top: 0px;
-        left: 0px;
+        top: -${props =>props.strokeSize}px;
+        left: -${props =>props.strokeSize}px;
         width: ${props =>props.size + props.strokeSize * 2}px;
         height: ${props =>props.size + props.strokeSize * 2}px;
         border-radius: 50%;
         background: 
         conic-gradient(
-            ${tokens.colors.strokeColorGreen} ${props =>props.rotation * 100}%,
-            transparent ${props => props.rotation * 100}%
+            ${tokens.colors.strokeColorGreen} ${props =>props.progressFactor * 100}%,
+            transparent ${props => props.progressFactor * 100}%
         );
         transform: rotate(-180deg);
         -webkit-mask: 

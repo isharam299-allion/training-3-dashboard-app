@@ -192,6 +192,27 @@ const WeekBookCount = styled.h4`
     padding: 0px;
 `;
 
+const PlayBookTitle = styled.h4`
+    font-family: ${tokens.fontFamily.fontFamilyNunito};
+    color : ${tokens.colors.fontColorHeading3};
+    font-size: ${tokens.fontSizes.fsLarge20};
+    font-weight:  ${tokens.fontWeights.bold};
+    line-height: ${tokens.lineHeights.lineHeight27};
+    text-align: center;
+    margin: 0px;
+    padding: 0px;
+`;
+
+const PlayBookAuthor = styled.h5`
+    font-family: ${tokens.fontFamily.fontFamilyNunito};
+    color : ${tokens.colors.fontColorPlayBookAuthor};
+    font-size: ${tokens.fontSizes.fsExtraSmall14};
+    font-weight: ${tokens.fontWeights.regular};
+    line-height: ${tokens.lineHeights.lineHeight19};
+    text-align: center;
+    margin: 0px;
+`;
+
 export {
     GlobalStyles,
     Heading1, 
@@ -211,5 +232,7 @@ export {
     NextBookAuthor,
     NextBookDuration,
     WeekBookTitle,
-    WeekBookCount
+    WeekBookCount,
+    PlayBookTitle,
+    PlayBookAuthor
 };

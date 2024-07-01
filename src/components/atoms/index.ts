@@ -7,10 +7,12 @@ import { StyledInput } from "./input/SearchInput";
 import { UserProfileImg } from "./user-profile-img/UserProfileImg";
 import { Button } from "./button/Button";
 import { ProgressCircle } from "./progress-circle/ProgressCircle";
+import { ThumbnailBorder } from "./thumbnail/ThumbnailBorder";
 
 export {
     Logo, 
     Thumbnail, 
+    ThumbnailBorder,
     IMAGE_TYPE, 
     Typography , 
     SvgIcon , 
