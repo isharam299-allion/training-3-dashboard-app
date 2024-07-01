@@ -2,7 +2,8 @@ import styled from "styled-components";
 import { tokens } from "../../tokens/DesignTokens";
 import React from "react";
 import { NextBook } from "../../molecules";
-import { FAULT_IN_OUR_STARS } from "../../../utilities/Book.data";
+import { FAULT_IN_OUR_STARS, NEVER_EAT_ALONE, THE_BOOK_THEIF } from "../../../utilities/Book.data";
+import { Typography } from "../../atoms";
 
 interface UserBookSectionProps {
     isUserSectionOpen : boolean;
@@ -28,11 +29,25 @@ const Container = styled.div`
     margin: 100px 33px 35px 32px;
 `;
 
+const BookWrapper = styled.div`
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    margin-top: 10px;
+    margin-bottom: 33px;
+`;
+
 
 const UserBooksSection : React.FC<UserBookSectionProps> = ({isUserSectionOpen}) => (
     <StyledSection isUserSectionOpen={isUserSectionOpen}>
         <Container>
-            <NextBook  book={FAULT_IN_OUR_STARS}/>
+            <Typography.Heading3>Next Book</Typography.Heading3>
+            <BookWrapper>
+                <NextBook  book={FAULT_IN_OUR_STARS}/>
+                <NextBook  book={NEVER_EAT_ALONE}/>
+                <NextBook  book={THE_BOOK_THEIF}/>
+            </BookWrapper>
+            <Typography.Heading3>Daily Works</Typography.Heading3>
         </Container>
         
     </StyledSection>

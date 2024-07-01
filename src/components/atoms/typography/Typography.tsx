@@ -38,11 +38,14 @@ const Heading2 = styled.h2`
 `;
 
 const Heading3 = styled.h3`
+    font-family: ${tokens.fontFamily.fontFamilyNunito};
     color : ${tokens.colors.fontColorHeading3};
     font-size: ${tokens.fontSizes.fsLarge22};
     font-weight:  ${tokens.fontWeights.bold};
-    line-height: 30.01px;
+    line-height: ${tokens.lineHeights.lineHeight30};
     letter-spacing: ${tokens.letterSpacing.ls3};
+    padding: 0px;
+    margin: 0px;
     text-align: left;
 `;
 
@@ -139,6 +142,7 @@ const ReadInfoTitle = styled.h3`
 `;
 
 const NextBookTitle = styled.h4`
+    font-family: ${tokens.fontFamily.fontFamilyNunito};
     color : ${tokens.colors.fontColorHeading3};
     font-size: ${tokens.fontSizes.fsSemiSmall16};
     font-weight:  ${tokens.fontWeights.bold};
@@ -148,6 +152,7 @@ const NextBookTitle = styled.h4`
 `;
 
 const NextBookAuthor = styled.h5`
+    font-family: ${tokens.fontFamily.fontFamilyNunito};
     color : ${tokens.colors.fontColorNextBookAuthor};
     font-size: ${tokens.fontSizes.fsExtraSmall14};
     font-weight: ${tokens.fontWeights.regular};
@@ -157,6 +162,7 @@ const NextBookAuthor = styled.h5`
 `;
 
 const NextBookDuration = styled.h5`
+    font-family: ${tokens.fontFamily.fontFamilyNunito}; 
     color : ${tokens.colors.fontColorNextBookDuration};
     font-size: ${tokens.fontSizes.fsExtraSmall14};
     font-weight: ${tokens.fontWeights.regular};
