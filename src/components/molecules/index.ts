@@ -6,6 +6,7 @@ import { MenuItem } from "./menu-item/MenuItem";
 import { TrendingBookBlock } from "./trending-book-block/TrendingBookBlock";
 import { ReadInfoBlock } from "./read-info/ReadInfoBlock";
 import { NextBook } from "./next-book/NextBook";
+import { WeekReadBooksBlock } from "./week-read-books/WeekReadBook";
 
 export {
     PopularBook ,
@@ -15,5 +16,6 @@ export {
     MenuItem,
     TrendingBookBlock,
     ReadInfoBlock,
-    NextBook
+    NextBook,
+    WeekReadBooksBlock
 }

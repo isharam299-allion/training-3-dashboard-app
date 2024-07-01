@@ -171,6 +171,27 @@ const NextBookDuration = styled.h5`
     margin: 0px;
 `;
 
+const WeekBookTitle = styled.h4`
+    font-family: ${tokens.fontFamily.fontFamilyNunito};
+    color : ${tokens.colors.strokeColorGreen}; 
+    font-size:     font-size: ${tokens.fontSizes.fsLarge20};
+    font-weight:  ${tokens.fontWeights.semiBold};
+    line-height: ${tokens.lineHeights.lineHeight27};
+    text-align: left;
+    margin: 0px;
+`;
+
+const WeekBookCount = styled.h4`
+    font-family: ${tokens.fontFamily.fontFamilyNunito};
+    color : ${tokens.colors.strokeColorGreen}; 
+    font-size:${tokens.fontSizes.fsLarge20};
+    font-weight:  ${tokens.fontWeights.bold};
+    line-height: ${tokens.lineHeights.lineHeight27};
+    text-align: center;
+    margin: 0px;
+    padding: 0px;
+`;
+
 export {
     GlobalStyles,
     Heading1, 
@@ -188,5 +209,7 @@ export {
     ReadInfoTitle,
     NextBookTitle,
     NextBookAuthor,
-    NextBookDuration
+    NextBookDuration,
+    WeekBookTitle,
+    WeekBookCount
 };

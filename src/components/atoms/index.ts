@@ -6,6 +6,7 @@ import { StyledIconBackground } from "./icon/IconBackground";
 import { StyledInput } from "./input/SearchInput";
 import { UserProfileImg } from "./user-profile-img/UserProfileImg";
 import { Button } from "./button/Button";
+import { ProgressCircle } from "./progress-circle/ProgressCircle";
 
 export {
     Logo, 
@@ -17,5 +18,6 @@ export {
     StyledIconBackground,
     StyledInput,
     UserProfileImg,
-    Button
+    Button,
+    ProgressCircle
 }

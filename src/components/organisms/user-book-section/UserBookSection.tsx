@@ -1,7 +1,7 @@
 import styled from "styled-components";
 import { tokens } from "../../tokens/DesignTokens";
 import React from "react";
-import { NextBook } from "../../molecules";
+import { NextBook, WeekReadBooksBlock } from "../../molecules";
 import { FAULT_IN_OUR_STARS, NEVER_EAT_ALONE, THE_BOOK_THEIF } from "../../../utilities/Book.data";
 import { Typography } from "../../atoms";
 
@@ -48,6 +48,7 @@ const UserBooksSection : React.FC<UserBookSectionProps> = ({isUserSectionOpen}) 
                 <NextBook  book={THE_BOOK_THEIF}/>
             </BookWrapper>
             <Typography.Heading3>Daily Works</Typography.Heading3>
+            <WeekReadBooksBlock readCount={3} readingCount={5}/>
         </Container>
         
     </StyledSection>
