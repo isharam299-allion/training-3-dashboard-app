@@ -3,7 +3,6 @@ import { tokens } from "../../tokens/DesignTokens";
 import { MenuItem } from "../../molecules";
 import { Images, SvgIconAssests } from "../../../assests";
 import { useState } from "react";
-import { SvgIcon } from "../../atoms";
 
     interface MenuBarProps {
         isMenuOpen : boolean;

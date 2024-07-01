@@ -3,7 +3,7 @@ import { Book } from "../../../utilities/Book.data";
 import React, { useEffect, useState } from "react";
 import { tokens } from "../../tokens/DesignTokens";
 import { ICON_TYPE, IMAGE_TYPE, ProgressCircle, StyledIconBackground, SvgIcon, Thumbnail, ThumbnailBorder, Typography } from "../../atoms";
-import { Backgrounds, SvgIconAssests } from "../../../assests";
+import { SvgIconAssests } from "../../../assests";
 
 interface PlayBooksProps {
     readingBooks : Book[];
