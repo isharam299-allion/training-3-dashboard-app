@@ -10,12 +10,16 @@ interface ReadInfoProps {
 
 const StyledDiv = styled.div`
     display: flex;
-    width: 240px;
+    width: 360px;
     height: 87px;
     border-radius: 16px;
     background-color: ${tokens.colors.bgColorWhite};
     padding: 10px;
     gap: 25px;
+
+    @media(min-width: 391px){
+        width: 240px;
+    }
 `;
 
 const TextWrapper = styled.div`

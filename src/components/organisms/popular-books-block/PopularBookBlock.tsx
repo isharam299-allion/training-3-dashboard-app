@@ -10,8 +10,14 @@ interface PopularBooksProps {
 const StyledDiv = styled.div`
     display: flex;
     flex-direction: column;
-    width: 775px;
+    width: auto;
+    max-width: 390px;
     margin-top: 30px;
+
+    @media (min-width: 391px) {
+        width: 775px;
+        max-width: 775px;
+    }
 `;
 
 const HeadingWrapper = styled.div`
@@ -31,8 +37,10 @@ const BooksWrapper = styled.div`
 
 
 
-const PopularBookBlock: React.FC<PopularBooksProps> = ({ bookList }) => (
-    <StyledDiv>
+const PopularBookBlock: React.FC<PopularBooksProps> = ({ bookList }) => {
+    const displayedBooks = window.innerWidth <= 390 ? bookList.slice(0, 3) : bookList;
+    return(
+        <StyledDiv>
         <HeadingWrapper>
             <Typography.Heading2>Popular</Typography.Heading2>
             <Typography.Hyperlink>View All</Typography.Hyperlink>
@@ -40,13 +48,14 @@ const PopularBookBlock: React.FC<PopularBooksProps> = ({ bookList }) => (
 
         <BooksWrapper>
             {
-                bookList.map((book, index) => (
+                displayedBooks.map((book, index) => (
                     <PopularBook book={book} key={index} />
                 ))
             }
         </BooksWrapper>
     </StyledDiv>
-);
+    )
+};
 
 export {
     PopularBookBlock

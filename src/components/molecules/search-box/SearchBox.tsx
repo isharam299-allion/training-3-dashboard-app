@@ -6,15 +6,20 @@ import { SVG_COMPONENTS } from "../../../assests/svg-icons";
 
 const StyledDiv = styled.div`
     display: flex;
+    flex: none;
     height: 50px;
-    width: 492px;
+    width: auto;
     border-radius: 30px;
     background-color: ${tokens.colors.bgColorSearchBar};
     justify-contentL: space-between;
     align-items: center;
     padding: 0px 5px;
-`;
 
+    @media (min-width: 391px) {
+        display: flex;
+        width: 492px;
+    }
+`;
 
 const SearchBox : React.FC = () => (
     <StyledDiv>

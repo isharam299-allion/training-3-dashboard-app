@@ -10,8 +10,13 @@ interface TopAuthorsProps {
 const StyledDiv = styled.div`
     display: flex;
     flex-direction: column;
-    width: 775px;
+    max-width: 390px;
     margin-top: 20px;
+
+    @media (min-width: 391px) {
+        width: 775px;
+        max-width: 775px;
+    }
 `;
 
 const HeadingWrapper = styled.div`
@@ -31,21 +36,22 @@ const AuthorsWrapper = styled.div`
 
 
 
-const TopAuthorBlock: React.FC<TopAuthorsProps> = ({ authorList }) => (
-    <StyledDiv>
+const TopAuthorBlock: React.FC<TopAuthorsProps> = ({ authorList }) => {
+    const displayedAuthors = window.innerWidth <= 390 ? authorList.slice(0, 3) : authorList;
+    return(<StyledDiv>
         <HeadingWrapper>
             <Typography.Heading2>Top Authors</Typography.Heading2>
             <Typography.Hyperlink>View All</Typography.Hyperlink>
         </HeadingWrapper>
         <AuthorsWrapper>
             {
-                authorList.map((author, index) => (
+                displayedAuthors.map((author, index) => (
                     <TopAuthor author={author} key={index} />
                 ))
             }
         </AuthorsWrapper>
-    </StyledDiv>
-);
+    </StyledDiv>);
+};
 
 export {
     TopAuthorBlock

@@ -13,14 +13,20 @@ interface UserMenuProps {
 
 const StyledDiv = styled.div`
     display : flex;
-    width: 243px;
+    width: auto;
     height: 50px;
     align-items: center;
     justify-content: space-between;
     text-align: center;
     border-radius: 30px;
     background-color: ${tokens.colors.bgColorWhite};
-    padding: 6px 21px 6px 6px;
+    padding: 0px;
+    gap: 15px;
+
+    @media (min-width: 391px) {
+       width: 243px;
+       padding: 6px 21px 6px 6px;
+    }
 `;
 
 const StyledWrapper = styled.div`
@@ -46,8 +52,8 @@ const UserName = styled(Typography.UserName)`
 const UserMenu : React.FC<UserMenuProps> = ({user , onClickUserProfile}) => (
     <StyledDiv>
         <StyledWrapper>
-        <UserProfileImg imgUrl={user.profileImg} onClickUserProfile={onClickUserProfile}/>
-        <Typography.UserName>{user.name}</Typography.UserName>
+            <UserProfileImg imgUrl={user.profileImg} onClickUserProfile={onClickUserProfile}/>
+            <UserName>{user.name}</UserName>
         </StyledWrapper>
         <SvgIcon SvgComponent={SvgIconAssests.SVG_COMPONENTS.DOWN_SVG} type={ICON_TYPE.DOWN_ICON} />
     </StyledDiv>

@@ -10,11 +10,14 @@ const GlobalStyles = createGlobalStyle`
         background-color : ${tokens.colors.bgColorPage}; 
         width: 100%;
         height: 100%;
-        max-width: 1440px;
-        max-height: 1024px;
         display: flex;
         justify-content: center; 
         align-self: center;
+
+        @media (min-width: 391px) {
+            max-width: 1440px;
+            max-height: 1024px;
+        }
     }
 
     * {

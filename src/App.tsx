@@ -6,9 +6,12 @@ import styled from 'styled-components';
 
 const Container = styled.div`
   position: relative;
-  width: 100%;
-  max-width: 1440px;
+  max-width: 390px;
   height: 100vh;
+
+  @media (min-width: 391px) {
+    max-width: 1440px;
+  }
 `;
 
 function App() {

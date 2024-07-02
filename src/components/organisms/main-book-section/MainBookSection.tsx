@@ -18,10 +18,17 @@ const StyledSection = styled.section<Pick<MainSectioProps, 'isMenuOpen' | 'isUse
     flex-direction: column;
     align-items: center;
     height: 100vh;
-    max-width: 1440px;
-    margin-left: ${ props => (props.isMenuOpen ? '247px' : '20px')};
-    margin-right: ${ props => (props.isUserSectionOpen ? '413px' : '20px')};
+    max-width: 390px;
+    margin-left: 20px;
+    margin-right: 20px;
     transition: margin 0.3s ease;
+
+    @media (min-width: 391px) {
+        max-width: 1440px;
+        margin-left: ${ props => (props.isMenuOpen ? '247px' : '20px')};
+        margin-right: ${ props => (props.isUserSectionOpen ? '413px' : '20px')};
+        transition: margin 0.3s ease;
+    }
 `;
 
 const Separator = styled.div`
@@ -33,10 +40,16 @@ const Separator = styled.div`
 
 const ReadInfosWrapper = styled.div`
     display: flex;
-    width : 100%;
+    flex-direction: column;
     justify-content: space-between;
-    max-width: 781px;
+    max-width: 390px;
     align-items: center;
+    gap: 15px;
+
+    @media(min-width: 391px) {
+        max-width: 781px;
+        flex-direction: row;
+    }
 `;
 
 
@@ -65,12 +78,11 @@ const MainBookSection : React.FC<MainSectioProps> = ({isMenuOpen, isUserSectionO
         <Separator/>
         <TopAuthorBlock  authorList={TOP_AUTHORS}/>
         <ReadInfosWrapper>
-        {
-            readinfoList.map((info, index) => (
-                <ReadInfoBlock count={info.count} title={info.title} icon={info.icon} />
-            ))
-        }
-        
+            {
+                readinfoList.map((info, index) => (
+                    <ReadInfoBlock count={info.count} title={info.title} icon={info.icon} />
+                ))
+            } 
         </ReadInfosWrapper>
     </StyledSection>
 );
