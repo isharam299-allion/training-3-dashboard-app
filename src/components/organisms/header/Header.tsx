@@ -7,15 +7,26 @@ import { USER_THANH_PHAM } from "../../../utilities/User.data";
 
 const StyledHeader = styled.header`
     display : flex;
-    padding : 30px;
-    text-align: center;
+    height: 115px;
     align-items: center;
     justify-content: space-between;
-    z-index: 1000;
+
+    @media (min-width: 391px) {
+        display : flex;
+        padding : 35px 33px 30px 55px;
+        height: 115px;
+        width: 1440px;
+        max-width : 1440px;
+        text-align: center;
+        align-items: center;
+        justify-content: space-between;
+        z-index: 1000;
+    }
 `;
 
 const StyledLanguageDiv = styled.div`
     display: flex;
+    height: 50px;
     align-items: center;
     justify-content: space-between;
     gap: 15px;
@@ -30,6 +41,7 @@ const StyledUserMenuWrapper = styled.div`
     height: 50px;
     max-width: 313px;
     z-index: 1000;
+    margin-left: 72px;
 `;
 
 const StyledSearchBoxWrapper = styled.div`

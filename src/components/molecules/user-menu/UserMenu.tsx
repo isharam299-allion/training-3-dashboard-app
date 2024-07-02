@@ -30,6 +30,17 @@ const StyledWrapper = styled.div`
     gap: 15px;
 `;
 
+const UserName = styled(Typography.UserName)`
+  display: none;
+
+  @media (min-width: 391px) {
+    display: flex;
+  }
+
+  @media (min-width: 700px) and (max-width: 1440px) {
+    display: flex;
+  }
+`;
 
 
 const UserMenu : React.FC<UserMenuProps> = ({user , onClickUserProfile}) => (

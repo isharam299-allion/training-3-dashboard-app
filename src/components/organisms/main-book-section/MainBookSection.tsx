@@ -18,6 +18,7 @@ const StyledSection = styled.section<Pick<MainSectioProps, 'isMenuOpen' | 'isUse
     flex-direction: column;
     align-items: center;
     height: 100vh;
+    max-width: 1440px;
     margin-left: ${ props => (props.isMenuOpen ? '247px' : '20px')};
     margin-right: ${ props => (props.isUserSectionOpen ? '413px' : '20px')};
     transition: margin 0.3s ease;
@@ -27,12 +28,14 @@ const Separator = styled.div`
     border: 1px solid ${tokens.colors.separatorColor};
     height : 1px;
     width : 100%;
+    max-width: 781px;
 `;
 
 const ReadInfosWrapper = styled.div`
     display: flex;
     width : 100%;
     justify-content: space-between;
+    max-width: 781px;
     align-items: center;
 `;
 

@@ -15,7 +15,7 @@ const getIconSize = ( type : ICON_TYPE) => {
    switch (type) {
     case ICON_TYPE.MENU_ICON:
     case ICON_TYPE.NOTIFICATION_ICON:
-        return '24px';
+        return '26px';
     case ICON_TYPE.SEARCH_ICON:
         return '20px';
     case ICON_TYPE.READ_INFO_ICON:

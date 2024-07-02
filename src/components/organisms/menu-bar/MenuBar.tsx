@@ -9,17 +9,23 @@ import { useState } from "react";
     }
 
     const StyledDiv = styled.div<Pick<MenuBarProps,'isMenuOpen'>>`
-        position: fixed;
-        top: 0;
-        left: 0;
-        display: flex;
-        flex-direction: column;
-        width: 212px;
-        height: 100vh;
-        border-radius: 40px 0px 0px 40px;
-        background-color: ${tokens.colors.bgColorWhite};
-        transform: ${ props => (props.isMenuOpen ? 'translateX(0)' : 'translateX(-100%)')};
-        transition: transform 0.3s ease;
+        display: none;
+        @media (min-width: 390px) {  
+            position: absolute;
+            top: 0;
+            left: 0;
+            bottom: 0;
+            display: flex;
+            flex-direction: column;
+            width: 212px;
+            height: 100vh;
+            max-height: 1024px;
+            border-radius: 40px 0px 0px 40px;
+            background-color: ${tokens.colors.bgColorWhite};
+            transform: ${ props => (props.isMenuOpen ? 'translateY(0)' : 'translateY(-100%)')};
+            transition: transform 0.3s ease;
+        }
+
     `;
 
     const StyledNav = styled.nav`

@@ -7,6 +7,7 @@ const StyledLogo = styled (LogoSVG)`
     width : 101px;
     z-index: 1000;
     cursor: pointer;
+    margin-right: 90px;
 `;
 
 interface LogoProps {

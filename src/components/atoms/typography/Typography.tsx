@@ -3,9 +3,18 @@ import { tokens } from "../../tokens/DesignTokens";
 
 const GlobalStyles = createGlobalStyle`
 
-    body {
+    body, html {
+        position: relative;
+        margin: auto;
         font-family : ${tokens.fontFamily};
-        background-color : ${tokens.colors.bgColorPage};  
+        background-color : ${tokens.colors.bgColorPage}; 
+        width: 100%;
+        height: 100%;
+        max-width: 1440px;
+        max-height: 1024px;
+        display: flex;
+        justify-content: center; 
+        align-self: center;
     }
 
     * {

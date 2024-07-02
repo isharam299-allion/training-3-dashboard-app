@@ -11,17 +11,22 @@ interface UserBookSectionProps {
 }
 
 const StyledSection = styled.aside<Pick<UserBookSectionProps, 'isUserSectionOpen'>>`
-    position: fixed;
-    top: 0;
-    right: 0;
-    display: flex;
-    width: 378px;
-    height: 100vh;
-    border-radius: 40px;
-    opacity: 0px;
-    background-color: ${tokens.colors.bgColorLightGreen};
-    transform: ${ props => (props.isUserSectionOpen ? 'translateX(0)' : 'translateX(100%)')};
-    transition: transform 0.3s ease;
+    display: none;
+
+    @media (min-width: 391px) {
+        position: absolute;
+        top: 0;
+        right: 0;
+        display: flex;
+        width: 378px;
+        height: 100vh;
+        max-height: 1024px;
+        border-radius: 40px;
+        opacity: 0px;
+        background-color: ${tokens.colors.bgColorLightGreen};
+        transform: ${ props => (props.isUserSectionOpen ? 'translateY(0)' : 'translateY(-100%)')};
+        transition: transform 0.3s ease;
+    }
 `;
 
 const Container = styled.div`
