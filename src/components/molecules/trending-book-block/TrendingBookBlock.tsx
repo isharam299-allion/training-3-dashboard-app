@@ -1,6 +1,6 @@
 import styled from "styled-components";
 import { tokens } from "../../tokens/DesignTokens";
-import { Images } from "../../../assests";
+import { Backgrounds, Images } from "../../../assests";
 import { Button, Typography } from "../../atoms";
 
 const StyledContainer = styled.div`
@@ -12,12 +12,17 @@ const StyledContainer = styled.div`
     border-radius: 24px;
     background-color: ${tokens.colors.bgColorGreen};
     padding: 20px;
+    background-image: url(${Backgrounds.BACKGROUNDS.WingBg}), linear-gradient(rgba(255, 0, 0, 0.5), rgba(0, 0, 255, 0.5));
+    background-size: contain; 
+    background-repeat: no-repeat; 
+    background-position: center;
+    background-blend-mode: overlay;
 
     @media (min-width: 391px) {
         flex-direction: row-reverse;
         width: 775px;
         height: 280px;
-        padding: 50px;
+        padding: 35px 50px 30px 50px;
     }
 `;
 

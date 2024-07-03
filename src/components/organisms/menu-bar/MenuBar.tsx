@@ -9,7 +9,7 @@ import { useState } from "react";
     }
 
     const StyledDiv = styled.div<Pick<MenuBarProps,'isMenuOpen'>>`
-        display: none;
+        display: ${props => props.isMenuOpen ? 'flex' : 'none'};
         position: absolute;
         top: 0;
         left: 0;
@@ -17,14 +17,17 @@ import { useState } from "react";
         flex-direction: column;
         width: 212px;
         height: 100vh;
-        max-height: 1024px;
+        min-height: 700px;
         border-radius: 40px 0px 0px 40px;
         background-color: ${tokens.colors.bgColorWhite};
-        transform: ${ props => (props.isMenuOpen ? 'translateY(0)' : 'translateY(-100%)')};
+        transform: ${ props => (props.isMenuOpen ? 'translateX(0)' : 'translateX(-100%)')};
         transition: transform 0.3s ease;
 
         @media (min-width: 391px) {  
             display: flex;
+            max-height: 1024px;
+            transform: ${ props => (props.isMenuOpen ? 'translateY(0)' : 'translateY(-100%)')};
+            transition: transform 0.3s ease;
         }
 
     `;
@@ -32,21 +35,36 @@ import { useState } from "react";
     const StyledNav = styled.nav`
         display: flex;
         flex-direction: column;
-        gap: 15px;
-        margin-top: 190px;
+        gap: 5px;
+        margin-top: 115px;
         margin-left: 20px;
         margin-right: 20px;
+
+        @media (min-width: 391px) {
+            margin-top: 190px;
+            gap: 15px;
+        }
     `;
 
     const StyledSvgImgWrapper = styled.div`
         display: flex;
+        width: 114px;
+        height 184px;
         align-items: center;
         justify-content: center;
         position: fixed;
         bottom: 0px;
-        margin-left: 36px;
+        margin-left: 46px;
         margin-right: 26px;
-        margin-bottom: 35px;
+        margin-bottom: 10px;
+
+        @media (min-width: 391px) {
+            width: 154px;
+            height 224px;
+            margin-bottom: 35px;
+            margin-left: 36px;
+            margin-right: 26px;
+        }
     `; 
 
     const MenuBar : React.FC<MenuBarProps> = ({isMenuOpen}) => {

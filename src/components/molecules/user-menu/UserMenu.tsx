@@ -20,7 +20,7 @@ const StyledDiv = styled.div`
     text-align: center;
     border-radius: 30px;
     background-color: ${tokens.colors.bgColorWhite};
-    padding: 0px;
+    padding: 6px;
     gap: 15px;
 
     @media (min-width: 391px) {

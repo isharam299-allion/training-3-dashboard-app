@@ -3,7 +3,7 @@ import { Book } from "../../../utilities/Book.data";
 import React, { useEffect, useState } from "react";
 import { tokens } from "../../tokens/DesignTokens";
 import { ICON_TYPE, IMAGE_TYPE, ProgressCircle, StyledIconBackground, SvgIcon, Thumbnail, ThumbnailBorder, Typography } from "../../atoms";
-import { SvgIconAssests } from "../../../assests";
+import { Backgrounds, SvgIconAssests } from "../../../assests";
 
 interface PlayBooksProps {
     readingBooks : Book[];
@@ -17,7 +17,6 @@ const StyledDiv = styled.div`
     height: 331px;
     border-radius: 16px;
     background-color : ${tokens.colors.bgColorWhite};
-    padding: 26px 20px 20px 20px ;
     margin-bottom: 32px;
 `;
 
@@ -25,7 +24,11 @@ const PlayBooksWrapper = styled.div`
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin-bottom: 20px;
+    padding: 26px 20px 20px 20px ;
+    background-image: url(${Backgrounds.BACKGROUNDS.PlayBookPetalbBg});
+    background-size: contain; 
+    background-repeat: no-repeat;
+    background-position: center;
 `;
 
 const PlayBookTitlesWrapper = styled.div`
@@ -34,13 +37,18 @@ const PlayBookTitlesWrapper = styled.div`
     justify-content: space-between;
     align-items: center;
     gap: 5px;
+    background-image: url(${Backgrounds.BACKGROUNDS.PlayBookSounWaveBg});
+    background-size: cover; 
+    background-repeat: no-repeat;
+    background-position: center;
+    margin: 0px 26px 0px 26px;
 `;
 
 const ButtonWrapper = styled.div`
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding : 15px 42px 0px 42px;
+    padding : 15px 62px 0px 62px;
 `;
 
 const PlayBooksBlock : React.FC<PlayBooksProps> = ({ readingBooks}) => {
@@ -49,7 +57,7 @@ const PlayBooksBlock : React.FC<PlayBooksProps> = ({ readingBooks}) => {
 
     useEffect(() => {
         if (bookCount >= 3) {
-          setPlayBookIndex(2);
+          setPlayBookIndex(1);
         }
       }, [bookCount]);
 
