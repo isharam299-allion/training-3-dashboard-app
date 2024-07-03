@@ -26,6 +26,6 @@ const StyledInput = styled.input`
     }
 `;
 
+export {StyledInput};
 
-
-export {StyledInput}
+StyledInput.displayName = 'StyledInput';

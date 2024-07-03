@@ -33,15 +33,6 @@ const getBorderRadius = (type : ICON_TYPE) => {
        }
 }
 
-const getBorder = (type : ICON_TYPE) => {
-    switch (type) {
-        case ICON_TYPE.PLAY_PAUSE_ICON:
-            return `4px solid ${tokens.colors.strokeColorGreen}`;
-        default:
-            return 'none';
-       }
-}
-
 const getFillColor = (type : ICON_TYPE) => {
     switch (type) {
         case ICON_TYPE.FLAG_ICON:
@@ -62,8 +53,10 @@ const StyledIconBackground = styled.div<Pick<IconBackgroundProps ,'iconType'>>`
         width: ${props => getSize(props.iconType)};
         height: ${props => getSize(props.iconType)};
         border-radius: ${props => getBorderRadius(props.iconType)};
-        border: ${props => getBorder(props.iconType)};
+        border: none;
         background: ${props => getFillColor(props.iconType)};
 `;
 
-export {StyledIconBackground}
+export {StyledIconBackground};
+
+StyledIconBackground.displayName = 'StyledIconBackground';

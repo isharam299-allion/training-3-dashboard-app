@@ -1,22 +1,21 @@
 import type { Meta, StoryObj } from '@storybook/react';
-import { fn } from '@storybook/test';
-import Logo from './Logo';
+import { Button } from './Button';
 
 
 const meta = {
-  title: 'Components/Atoms/Logo',
-  component: Logo,
+  title: 'Components/Atoms/Button',
+  component: Button,
   parameters: {
     layout: 'centered',
   },
   tags: ['autodocs'],
-  args: { onClickLogo: fn() },
-} satisfies Meta<typeof Logo>;
+} satisfies Meta<typeof Button>;
 
 export default meta;
 type Story = StoryObj<typeof meta>;
 
 
-export const Logosvg: Story = {
+export const ViewNowButton: Story = {
   args: { 
+    title: 'VIEW NOW'
 }}
