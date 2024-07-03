@@ -57,6 +57,7 @@ import { useState } from "react";
         margin-left: 46px;
         margin-right: 26px;
         margin-bottom: 10px;
+        margin-top: 215px;
 
         @media (min-width: 391px) {
             width: 154px;

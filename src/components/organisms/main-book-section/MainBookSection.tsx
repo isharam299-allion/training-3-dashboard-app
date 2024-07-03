@@ -17,12 +17,12 @@ const StyledSection = styled.section<Pick<MainSectioProps, 'isMenuOpen' | 'isUse
     display: flex;
     flex-direction: column;
     align-items: center;
-    height: 100vh;
     max-width: 390px;
     margin-left: 20px;
     margin-right: 20px;
     transition: margin 0.3s ease;
-
+    padding-bottom: 10px;
+    
     @media (min-width: 391px) {
         max-width: 1440px;
         margin-left: ${ props => (props.isMenuOpen ? '247px' : '20px')};
