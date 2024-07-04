@@ -17,5 +17,8 @@ const config: StorybookConfig = {
     options: {},
   },
   staticDirs: ["..\\public"],
+  typescript: {
+    check: true,
+  },
 };
 export default config;
