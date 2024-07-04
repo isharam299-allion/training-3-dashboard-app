@@ -14,7 +14,7 @@ export default meta;
 type Story = StoryObj<typeof meta>;
   
   
-export const TrendingBlock: Story = {
+export const WeekReadBooksSummaryBlock: Story = {
     args: { 
         readCount: 3,
         readingCount: 5

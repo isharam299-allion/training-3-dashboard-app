@@ -8,12 +8,12 @@ import { tokens } from "../../tokens/DesignTokens";
 import { SvgIconAssests } from "../../../assests";
 import { ReadInfoProps } from "../../molecules/read-info/ReadInfoBlock";
 
-interface MainSectioProps {
+interface MainSectionProps {
     isMenuOpen : boolean;
     isUserSectionOpen: boolean;
 }
 
-const StyledSection = styled.section<Pick<MainSectioProps, 'isMenuOpen' | 'isUserSectionOpen'>>`
+const StyledSection = styled.section<Pick<MainSectionProps, 'isMenuOpen' | 'isUserSectionOpen'>>`
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -71,7 +71,7 @@ const readinfoList : ReadInfoProps[] = [
     }
 ]
 
-const MainBookSection : React.FC<MainSectioProps> = ({isMenuOpen, isUserSectionOpen}) => (
+const MainBookSection : React.FC<MainSectionProps> = ({isMenuOpen, isUserSectionOpen}) => (
     <StyledSection isMenuOpen={isMenuOpen} isUserSectionOpen={isUserSectionOpen}>
         <TrendingBookBlock/>
         <PopularBookBlock bookList={POPULAR_BOOKS}/>

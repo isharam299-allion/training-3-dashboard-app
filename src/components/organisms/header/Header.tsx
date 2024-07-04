@@ -87,27 +87,27 @@ interface HeaderProps {
 
 const Header : React.FC<HeaderProps> = ({onClickLogo, onClickUserIcon}) => (
     <StyledHeader>
-      
-            <LogoWrapper>
-                <Logo onClickLogo={onClickLogo}/>
-            </LogoWrapper>
-            
-            <StyledSearchBoxWrapper>
-                <SearchBox/>
-                <StyledLanguageDiv>
-                    <Typography.Language>EN</Typography.Language>
-                    <StyledIconBackground iconType={ICON_TYPE.FLAG_ICON}>
-                        <SvgIcon type={ICON_TYPE.FLAG_ICON} SvgComponent={SvgFlagAssests.SVG_FLAGS.FLAG_UK_SVG}/>
-                    </StyledIconBackground>
-                </StyledLanguageDiv>
-            </StyledSearchBoxWrapper>
-            <StyledUserMenuWrapper>
-                <StyledIconBackground iconType={ICON_TYPE.NOTIFICATION_ICON}>
-                    <SvgIcon type={ICON_TYPE.NOTIFICATION_ICON} SvgComponent={SvgIconAssests.SVG_COMPONENTS.NOTIFICATION_ICON_SVG}/>
+        <LogoWrapper>
+            <Logo onClickLogo={onClickLogo}/>
+        </LogoWrapper>
+        
+        <StyledSearchBoxWrapper>
+            <SearchBox/>
+            <StyledLanguageDiv>
+                <Typography.Language>EN</Typography.Language>
+                <StyledIconBackground iconType={ICON_TYPE.FLAG_ICON}>
+                    <SvgIcon type={ICON_TYPE.FLAG_ICON} SvgComponent={SvgFlagAssests.SVG_FLAGS.FLAG_UK_SVG}/>
                 </StyledIconBackground>
-                <UserMenu user={USER_THANH_PHAM} onClickUserProfile={onClickUserIcon} />
-            </StyledUserMenuWrapper>
-       
+            </StyledLanguageDiv>
+        </StyledSearchBoxWrapper>
+
+        <StyledUserMenuWrapper>
+            <StyledIconBackground iconType={ICON_TYPE.NOTIFICATION_ICON}>
+                <SvgIcon type={ICON_TYPE.NOTIFICATION_ICON} SvgComponent={SvgIconAssests.SVG_COMPONENTS.NOTIFICATION_ICON_SVG}/>
+            </StyledIconBackground>
+            <UserMenu user={USER_THANH_PHAM} onClickUserProfile={onClickUserIcon} />
+        </StyledUserMenuWrapper>
+        
     </StyledHeader>
 );
 
