@@ -52,3 +52,5 @@ const ProgressCircle = styled.div<Pick<ProgressCircleProps, 'size' |'strokeSize'
 export {
     ProgressCircle
 }
+
+ProgressCircle.displayName = 'ProgressCircle';

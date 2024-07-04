@@ -64,3 +64,5 @@ const ThumbnailBorder = styled.div<Pick<ThumbnailBgProps, 'imageType'>>`
 export {
     ThumbnailBorder
 }
+
+ThumbnailBorder.displayName = 'ThumbnailBorder';
