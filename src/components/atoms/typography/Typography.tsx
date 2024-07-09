@@ -6,7 +6,7 @@ const GlobalStyles = createGlobalStyle`
     body, html {
         position: relative;
         margin: auto;
-        font-family : ${tokens.fontFamily};
+        font-family : ${tokens.fontFamily.fontFamilyNunito};
         background-color : ${tokens.colors.bgColorPage}; 
         width: 100%;
         height: 100%;
