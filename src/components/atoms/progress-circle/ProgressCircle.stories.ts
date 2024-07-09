@@ -16,7 +16,7 @@ type Story = StoryObj<typeof meta>;
   
 export const HalfProgressCircle: Story = {
     args: { 
-        progressFactor : 1/2,
+        $progressFactor : 1/2,
         size : 100,
-        strokeSize : 5
+        $strokeSize : 5
 }};

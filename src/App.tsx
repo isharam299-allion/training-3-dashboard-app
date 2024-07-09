@@ -42,9 +42,9 @@ function App() {
       <Container>
         <Header onClickLogo={() => setMenuOpen(!isMenuOpen)}  
           onClickUserIcon={() => setUserSectionOpen(!isUserSectionOpen)}/>
-        <MenuBar isMenuOpen={isMenuOpen}/>
-        <UserBooksSection isUserSectionOpen={isUserSectionOpen}/>
-        <MainBookSection isMenuOpen={isMenuOpen} isUserSectionOpen={isUserSectionOpen}/>
+        <MenuBar $isMenuOpen={isMenuOpen}/>
+        <UserBooksSection $isUserSectionOpen={isUserSectionOpen}/>
+        <MainBookSection $isMenuOpen={isMenuOpen} $isUserSectionOpen={isUserSectionOpen}/>
       </Container>
       
     </>

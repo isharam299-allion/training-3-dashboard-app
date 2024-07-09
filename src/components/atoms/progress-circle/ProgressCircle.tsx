@@ -2,12 +2,12 @@ import styled from "styled-components";
 import { tokens } from "../../tokens/DesignTokens";
 
 interface ProgressCircleProps {
-   progressFactor : number;
+   $progressFactor : number;
    size : number;
-   strokeSize : number;
+   $strokeSize : number;
 }
 
-const ProgressCircle = styled.div<Pick<ProgressCircleProps, 'size' |'strokeSize'| 'progressFactor'>>`
+const ProgressCircle = styled.div<Pick<ProgressCircleProps, 'size' |'$strokeSize'| '$progressFactor'>>`
     width: ${props =>props.size}px;
     height: ${props =>props.size}px;
     border-radius: 50%;
@@ -20,26 +20,26 @@ const ProgressCircle = styled.div<Pick<ProgressCircleProps, 'size' |'strokeSize'
     &::before {
         content: '';
         position: absolute;
-        top: -${props =>props.strokeSize}px;
-        left: -${props =>props.strokeSize}px;
+        top: -${props =>props.$strokeSize}px;
+        left: -${props =>props.$strokeSize}px;
         width: 100%;
         height: 100%;
         border-radius: 50%;
-        border: ${props =>props.strokeSize}px solid ${tokens.colors.strokeColorLightGreen}; 
+        border: ${props =>props.$strokeSize}px solid ${tokens.colors.strokeColorLightGreen}; 
     }
 
     &::after {
         content: '';
         position: absolute;
-        top: -${props =>props.strokeSize}px;
-        left: -${props =>props.strokeSize}px;
-        width: ${props =>props.size + props.strokeSize * 2}px;
-        height: ${props =>props.size + props.strokeSize * 2}px;
+        top: -${props =>props.$strokeSize}px;
+        left: -${props =>props.$strokeSize}px;
+        width: ${props =>props.size + props.$strokeSize * 2}px;
+        height: ${props =>props.size + props.$strokeSize * 2}px;
         border-radius: 50%;
         background: 
         conic-gradient(
-            ${tokens.colors.strokeColorGreen} ${props =>props.progressFactor * 100}%,
-            transparent ${props => props.progressFactor * 100}%
+            ${tokens.colors.strokeColorGreen} ${props =>props.$progressFactor * 100}%,
+            transparent ${props => props.$progressFactor * 100}%
         );
         transform: rotate(-180deg);
         -webkit-mask: 

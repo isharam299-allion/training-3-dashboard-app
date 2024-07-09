@@ -16,6 +16,6 @@ type Story = StoryObj<typeof meta>;
   
 export const MainSection: Story = {
     args: { 
-       isMenuOpen: false,
-       isUserSectionOpen: false
+       $isMenuOpen: false,
+       $isUserSectionOpen: false
 }};

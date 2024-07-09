@@ -5,11 +5,11 @@ import { Images, SvgIconAssests } from "../../../assests";
 import { useState } from "react";
 
     interface MenuBarProps {
-        isMenuOpen : boolean;
+        $isMenuOpen : boolean;
     }
 
-    const StyledDiv = styled.div<Pick<MenuBarProps,'isMenuOpen'>>`
-        display: ${props => props.isMenuOpen ? 'flex' : 'none'};
+    const StyledDiv = styled.div<Pick<MenuBarProps,'$isMenuOpen'>>`
+        display: ${props => props.$isMenuOpen ? 'flex' : 'none'};
         position: absolute;
         top: 0;
         left: 0;
@@ -19,13 +19,13 @@ import { useState } from "react";
         max-height: 1024px;
         border-radius: 40px 0px 0px 40px;
         background-color: ${tokens.colors.bgColorWhite};
-        transform: ${ props => (props.isMenuOpen ? 'translateX(0)' : 'translateX(-100%)')};
+        transform: ${ props => (props.$isMenuOpen ? 'translateX(0)' : 'translateX(-100%)')};
         transition: transform 0.3s ease;
 
         @media (min-width: 391px) {  
             display: flex;
             max-height: 1024px;
-            transform: ${ props => (props.isMenuOpen ? 'translateY(0)' : 'translateY(-100%)')};
+            transform: ${ props => (props.$isMenuOpen ? 'translateY(0)' : 'translateY(-100%)')};
             transition: transform 0.3s ease;
         }
 
@@ -67,7 +67,7 @@ import { useState } from "react";
         }
     `; 
 
-    const MenuBar : React.FC<MenuBarProps> = ({isMenuOpen}) => {
+    const MenuBar : React.FC<MenuBarProps> = ({$isMenuOpen: isMenuOpen}) => {
         const [activeIndex, setActiveIndex] = useState<number | null>(0);
         interface NavItem{
             content: string;
@@ -105,14 +105,14 @@ import { useState } from "react";
         ]
 
         return(
-            <StyledDiv isMenuOpen={isMenuOpen} >
+            <StyledDiv $isMenuOpen={isMenuOpen} >
                 <StyledNav>
                     {
                         navLinks.map((link, index) => (
                             <MenuItem 
                             key={index} 
                             content={link.content} 
-                            isActive={link.isActive} 
+                            $isActive={link.isActive} 
                             MenuIconSvg={link.isActive ? link.SvgActiveIcon :link.SvgIcon}
                             onClick={() => setActiveIndex(index)}/>
                         ))

@@ -18,6 +18,6 @@ type Story = StoryObj<typeof meta>;
   
 export const UserImage: Story = {
     args: { 
-        imgUrl : USER_THANH_PHAM.profileImg,
+        $imgUrl : USER_THANH_PHAM.profileImg,
         onClickUserProfile : fn(),
 }};

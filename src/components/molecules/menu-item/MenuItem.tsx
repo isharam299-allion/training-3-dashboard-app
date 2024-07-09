@@ -4,13 +4,13 @@ import { ICON_TYPE, StyledIconBackground, SvgIcon, Typography } from "../../atom
 import { tokens } from "../../tokens/DesignTokens";
 
 interface MenuItemProp {
-    isActive: boolean;
+    $isActive: boolean;
     content : string;
     MenuIconSvg : React.FC;
     onClick : () => void;
 }
 
-const StyledListItem = styled.li<Pick<MenuItemProp, 'isActive'>>`
+const StyledListItem = styled.li<Pick<MenuItemProp, '$isActive'>>`
     display: flex;
     align-items: center;
     gap: 20px;
@@ -19,15 +19,15 @@ const StyledListItem = styled.li<Pick<MenuItemProp, 'isActive'>>`
     border-radius: 30px;
     padding: 7px;
     list-style-type : none;
-    background: ${props => props.isActive ? tokens.colors.bgColorOrange : ''};
+    background: ${props => props.$isActive ? tokens.colors.bgColorOrange : ''};
 `;
 
-const MenuItem : React.FC<MenuItemProp> = ({content, MenuIconSvg , isActive , onClick}) => (
-    <StyledListItem isActive={isActive} onClick={onClick}>
-        <StyledIconBackground iconType={ICON_TYPE.MENU_ICON} >
+const MenuItem : React.FC<MenuItemProp> = ({content, MenuIconSvg , $isActive: isActive , onClick}) => (
+    <StyledListItem $isActive={isActive} onClick={onClick}>
+        <StyledIconBackground $iconType={ICON_TYPE.MENU_ICON} >
             <SvgIcon SvgComponent={MenuIconSvg} type={ICON_TYPE.MENU_ICON}/>
         </StyledIconBackground>
-        <Typography.NavLink isActive={isActive}>{content}</Typography.NavLink>
+        <Typography.NavLink $isActive={isActive}>{content}</Typography.NavLink>
     </StyledListItem>
 );
 

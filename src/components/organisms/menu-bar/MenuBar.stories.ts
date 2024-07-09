@@ -18,5 +18,5 @@ type Story = StoryObj<typeof meta>;
   
 export const MenuBarPanel: Story = {
     args: { 
-       isMenuOpen: false
+       $isMenuOpen: false
 }};

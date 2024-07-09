@@ -9,11 +9,11 @@ import { SvgIconAssests } from "../../../assests";
 import { ReadInfoProps } from "../../molecules/read-info/ReadInfoBlock";
 
 interface MainSectionProps {
-    isMenuOpen : boolean;
-    isUserSectionOpen: boolean;
+    $isMenuOpen : boolean;
+    $isUserSectionOpen: boolean;
 }
 
-const StyledSection = styled.section<Pick<MainSectionProps, 'isMenuOpen' | 'isUserSectionOpen'>>`
+const StyledSection = styled.section<Pick<MainSectionProps, '$isMenuOpen' | '$isUserSectionOpen'>>`
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -25,8 +25,8 @@ const StyledSection = styled.section<Pick<MainSectionProps, 'isMenuOpen' | 'isUs
     
     @media (min-width: 391px) {
         max-width: 1440px;
-        margin-left: ${ props => (props.isMenuOpen ? '240px' : '20px')};
-        margin-right: ${ props => (props.isUserSectionOpen ? '413px' : '20px')};
+        margin-left: ${ props => (props.$isMenuOpen ? '240px' : '20px')};
+        margin-right: ${ props => (props.$isUserSectionOpen ? '413px' : '20px')};
         transition: margin 0.3s ease;
     }
 `;
@@ -70,8 +70,8 @@ const readinfoList : ReadInfoProps[] = [
     }
 ]
 
-const MainBookSection : React.FC<MainSectionProps> = ({isMenuOpen, isUserSectionOpen}) => (
-    <StyledSection isMenuOpen={isMenuOpen} isUserSectionOpen={isUserSectionOpen}>
+const MainBookSection : React.FC<MainSectionProps> = ({$isMenuOpen: isMenuOpen, $isUserSectionOpen: isUserSectionOpen}) => (
+    <StyledSection $isMenuOpen={isMenuOpen} $isUserSectionOpen={isUserSectionOpen}>
         <TrendingBookBlock/>
         <PopularBookBlock bookList={POPULAR_BOOKS}/>
         <Separator/>
@@ -79,7 +79,7 @@ const MainBookSection : React.FC<MainSectionProps> = ({isMenuOpen, isUserSection
         <ReadInfosWrapper>
             {
                 readinfoList.map((info, index) => (
-                    <ReadInfoBlock count={info.count} title={info.title} icon={info.icon} />
+                    <ReadInfoBlock count={info.count} title={info.title} icon={info.icon}  key={index}/>
                 ))
             } 
         </ReadInfosWrapper>

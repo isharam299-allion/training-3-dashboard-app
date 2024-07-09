@@ -31,6 +31,7 @@ const AuthorsWrapper = styled.div`
     justify-content: space-between;
     align-items: center;
     margin: 18px 6px 19px 4px;
+    gap: 35px;
 `;
 
 

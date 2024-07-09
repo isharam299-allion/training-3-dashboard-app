@@ -52,7 +52,7 @@ const UserName = styled(Typography.UserName)`
 const UserMenu : React.FC<UserMenuProps> = ({user , onClickUserProfile}) => (
     <StyledDiv>
         <StyledWrapper>
-            <UserProfileImg imgUrl={user.profileImg} onClickUserProfile={onClickUserProfile}/>
+            <UserProfileImg $imgUrl={user.profileImg} onClickUserProfile={onClickUserProfile}/>
             <UserName>{user.name}</UserName>
         </StyledWrapper>
         <SvgIcon SvgComponent={SvgIconAssests.SVG_COMPONENTS.DOWN_SVG} type={ICON_TYPE.DOWN_ICON} />

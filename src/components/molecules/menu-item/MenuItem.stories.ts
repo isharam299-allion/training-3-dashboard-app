@@ -18,7 +18,7 @@ type Story = StoryObj<typeof meta>;
   
 export const InactiveHomeMenuItem: Story = {
     args: { 
-        isActive: false,
+        $isActive: false,
         content : 'Home',
         MenuIconSvg : SvgIconAssests.SVG_COMPONENTS.HOME_SVG,
         onClick : fn()
@@ -26,7 +26,7 @@ export const InactiveHomeMenuItem: Story = {
 
 export const ActiveHomeMenuItem: Story = {
     args: { 
-        isActive: true,
+        $isActive: true,
         content : 'Home',
         MenuIconSvg : SvgIconAssests.SVG_COMPONENTS.HOME_ACTIVE_SVG,
         onClick : fn()
@@ -34,7 +34,7 @@ export const ActiveHomeMenuItem: Story = {
 
 export const InactiveFavouriteMenuItem: Story = {
     args: { 
-        isActive: false,
+        $isActive: false,
         content : 'Favorite',
         MenuIconSvg : SvgIconAssests.SVG_COMPONENTS.HEART_ICON_SVG,
         onClick : fn()
@@ -42,7 +42,7 @@ export const InactiveFavouriteMenuItem: Story = {
 
 export const ActiveFavotiteMenuItem: Story = {
     args: { 
-        isActive: true,
+        $isActive: true,
         content : 'Favorite',
         MenuIconSvg : SvgIconAssests.SVG_COMPONENTS.HEART_ACTIVE_ICON_SVG,
         onClick : fn()
@@ -50,7 +50,7 @@ export const ActiveFavotiteMenuItem: Story = {
 
 export const InactiveCategoryMenuItem: Story = {
     args: { 
-        isActive: false,
+        $isActive: false,
         content : 'Categories',
         MenuIconSvg : SvgIconAssests.SVG_COMPONENTS.CATEGORY_SVG,
         onClick : fn()
@@ -58,7 +58,7 @@ export const InactiveCategoryMenuItem: Story = {
 
 export const ActiveCategoryMenuItem: Story = {
     args: { 
-        isActive: true,
+        $isActive: true,
         content : 'Categories',
         MenuIconSvg : SvgIconAssests.SVG_COMPONENTS.CATEGORY_ACTIVE_SVG,
         onClick : fn()
@@ -66,7 +66,7 @@ export const ActiveCategoryMenuItem: Story = {
 
 export const InactiveFolderMenuItem: Story = {
     args: { 
-        isActive: false,
+        $isActive: false,
         content : 'Your Library',
         MenuIconSvg : SvgIconAssests.SVG_COMPONENTS.FOLDER_ICON_SVG,
         onClick : fn()
@@ -74,7 +74,7 @@ export const InactiveFolderMenuItem: Story = {
 
 export const ActiveFolderMenuItem: Story = {
     args: { 
-        isActive: true,
+        $isActive: true,
         content : 'Your Library',
         MenuIconSvg : SvgIconAssests.SVG_COMPONENTS.FOLDER_ACTIVE_ICON_SVG,
         onClick : fn()
@@ -82,7 +82,7 @@ export const ActiveFolderMenuItem: Story = {
 
 export const InactiveSettingMenuItem: Story = {
     args: { 
-        isActive: false,
+        $isActive: false,
         content : 'Settings',
         MenuIconSvg : SvgIconAssests.SVG_COMPONENTS.SETTING_ICON_SVG,
         onClick : fn()
@@ -90,7 +90,7 @@ export const InactiveSettingMenuItem: Story = {
 
 export const ActiveSettingMenuItem: Story = {
     args: { 
-        isActive: true,
+        $isActive: true,
         content : 'Settings',
         MenuIconSvg : SvgIconAssests.SVG_COMPONENTS.SETTING_ACTIVE_ICON_SVG,
         onClick : fn()
@@ -98,7 +98,7 @@ export const ActiveSettingMenuItem: Story = {
 
 export const InactiveLogoutMenuItem: Story = {
     args: { 
-        isActive: false,
+        $isActive: false,
         content : 'Logout',
         MenuIconSvg : SvgIconAssests.SVG_COMPONENTS.LOGOUT_ICON_SVG,
         onClick : fn()
@@ -106,7 +106,7 @@ export const InactiveLogoutMenuItem: Story = {
 
 export const ActiveLogoutMenuItem: Story = {
     args: { 
-        isActive: true,
+        $isActive: true,
         content : 'Logout',
         MenuIconSvg : SvgIconAssests.SVG_COMPONENTS.LOGOUT_ACTIVE_ICON_SVG,
         onClick : fn()

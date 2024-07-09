@@ -28,7 +28,7 @@ interface AuthorProps {
 
 const TopAuthor : React.FC<AuthorProps> = ({author}) => (
     <StyledDiv>
-        <ThumbnailBorder imageType={IMAGE_TYPE.TOP_AUTHOR}>
+        <ThumbnailBorder $imageType={IMAGE_TYPE.TOP_AUTHOR}>
             <StyledThumbnail>
                 <Thumbnail type={IMAGE_TYPE.TOP_AUTHOR} desktopImgSrc={author.desktopImg} 
                 mobileImgSrc={author.mobileImg} altText={author.altText} />

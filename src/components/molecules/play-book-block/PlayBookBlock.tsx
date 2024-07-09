@@ -85,7 +85,7 @@ return(
                 desktopImgSrc={readingBooks[getPreviousBookIndex()].desktopImg} 
                 mobileImgSrc={readingBooks[getPreviousBookIndex()].mobileImg}/>
             
-            <ThumbnailBorder imageType={IMAGE_TYPE.PLAY_BOOK}>
+            <ThumbnailBorder $imageType={IMAGE_TYPE.PLAY_BOOK}>
                 <Thumbnail altText={readingBooks[playBookIndex].altText} 
                 type={IMAGE_TYPE.PLAY_BOOK} 
                 desktopImgSrc={readingBooks[playBookIndex].desktopImg} 
@@ -104,14 +104,14 @@ return(
        
 
         <ButtonWrapper>
-            <StyledIconBackground iconType={ICON_TYPE.NEXT_BACK_ICON} onClick={previousBookOnClick}>
+            <StyledIconBackground $iconType={ICON_TYPE.NEXT_BACK_ICON} onClick={previousBookOnClick}>
                 <SvgIcon  SvgComponent={SvgIconAssests.SVG_COMPONENTS.BACK_SVG} type={ICON_TYPE.NEXT_BACK_ICON} />
             </StyledIconBackground>
-            <ProgressCircle progressFactor={.62} size={46} strokeSize={4}>
+            <ProgressCircle $progressFactor={.62} size={46} $strokeSize={4}>
                 <SvgIcon  SvgComponent={SvgIconAssests.SVG_COMPONENTS.PAUSE_ICON_SVG} type={ICON_TYPE.PLAY_PAUSE_ICON} />
             </ProgressCircle>
            
-            <StyledIconBackground iconType={ICON_TYPE.NEXT_BACK_ICON} onClick={nextBookOnClick}>
+            <StyledIconBackground $iconType={ICON_TYPE.NEXT_BACK_ICON} onClick={nextBookOnClick}>
                 <SvgIcon  SvgComponent={SvgIconAssests.SVG_COMPONENTS.NEXT_ICON_SVG} type={ICON_TYPE.NEXT_BACK_ICON} />
             </StyledIconBackground>
         </ButtonWrapper>

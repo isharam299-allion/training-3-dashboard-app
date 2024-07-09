@@ -24,7 +24,7 @@ const StyledDiv = styled.div`
 const SearchBox : React.FC = () => (
     <StyledDiv>
         <StyledInput placeholder="Search your book..." />
-        <StyledIconBackground iconType={ICON_TYPE.SEARCH_ICON}>
+        <StyledIconBackground $iconType={ICON_TYPE.SEARCH_ICON}>
             <SvgIcon type={ICON_TYPE.SEARCH_ICON} SvgComponent={SVG_COMPONENTS.SEARCH_ICON_SVG}/>
         </StyledIconBackground>
     </StyledDiv>

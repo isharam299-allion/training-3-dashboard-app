@@ -33,7 +33,7 @@ const TextWrapper = styled.div`
 
 const ReadInfoBlock : React.FC<ReadInfoProps> = ({count, icon, title}) => (
     <StyledDiv>
-        <StyledIconBackground iconType={ICON_TYPE.READ_INFO_ICON}>
+        <StyledIconBackground $iconType={ICON_TYPE.READ_INFO_ICON}>
             <SvgIcon SvgComponent={icon} type={ICON_TYPE.READ_INFO_ICON}/>
         </StyledIconBackground>
         <TextWrapper>

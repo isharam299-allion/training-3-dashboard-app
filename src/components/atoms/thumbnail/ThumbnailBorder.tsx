@@ -3,7 +3,7 @@ import { IMAGE_TYPE } from "./Thumbnail";
 import { tokens } from "../../tokens/DesignTokens";
 
 interface ThumbnailBgProps {
-    imageType : IMAGE_TYPE;
+    $imageType : IMAGE_TYPE;
 }
 
 const getHeight = (type : IMAGE_TYPE) => {
@@ -51,12 +51,12 @@ const getBorderSize = (type : IMAGE_TYPE) => {
     }
 }
 
-const ThumbnailBorder = styled.div<Pick<ThumbnailBgProps, 'imageType'>>`
+const ThumbnailBorder = styled.div<Pick<ThumbnailBgProps, '$imageType'>>`
     display: flex;
-    width: ${props => getWidth(props.imageType)};
-    height: ${props => getHeight(props.imageType)};
-    border-radius: ${props => getBorderRadius(props.imageType)};
-    border: ${props => getBorderSize(props.imageType)} solid ${tokens.colors.strokeColorGreen};
+    width: ${props => getWidth(props.$imageType)};
+    height: ${props => getHeight(props.$imageType)};
+    border-radius: ${props => getBorderRadius(props.$imageType)};
+    border: ${props => getBorderSize(props.$imageType)} solid ${tokens.colors.strokeColorGreen};
     justify-content: center;
     align-items: center;
 `;

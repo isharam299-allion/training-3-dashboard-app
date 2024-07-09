@@ -7,11 +7,11 @@ import { Typography } from "../../atoms";
 import { USER_THANH_PHAM } from "../../../utilities/User.data";
 
 interface UserBookSectionProps {
-    isUserSectionOpen : boolean;
+    $isUserSectionOpen : boolean;
 }
 
-const StyledSection = styled.aside<Pick<UserBookSectionProps, 'isUserSectionOpen'>>`
-    display: ${ props => (props.isUserSectionOpen ? 'flex' : 'none')};
+const StyledSection = styled.aside<Pick<UserBookSectionProps, '$isUserSectionOpen'>>`
+    display: ${ props => (props.$isUserSectionOpen ? 'flex' : 'none')};
     position: absolute;
     top: 0;
     right: 0;
@@ -22,12 +22,12 @@ const StyledSection = styled.aside<Pick<UserBookSectionProps, 'isUserSectionOpen
     padding-top: 115px;
     opacity: 0px;
     background-color: ${tokens.colors.bgColorLightGreen};
-    transform: ${ props => (props.isUserSectionOpen ? 'translateX(0)' : 'translateX(100%)')};
+    transform: ${ props => (props.$isUserSectionOpen ? 'translateX(0)' : 'translateX(100%)')};
     transition: transform 0.3s ease;
 
     @media (min-width: 391px) {
         height: auto;
-        transform: ${ props => (props.isUserSectionOpen ? 'translateY(0)' : 'translateY(-100%)')};
+        transform: ${ props => (props.$isUserSectionOpen ? 'translateY(0)' : 'translateY(-100%)')};
         transition: transform 0.3s ease;
     }
 `;
@@ -47,8 +47,8 @@ const BookWrapper = styled.div`
 `;
 
 
-const UserBooksSection : React.FC<UserBookSectionProps> = ({isUserSectionOpen}) => (
-    <StyledSection isUserSectionOpen={isUserSectionOpen}>
+const UserBooksSection : React.FC<UserBookSectionProps> = ({$isUserSectionOpen: isUserSectionOpen}) => (
+    <StyledSection $isUserSectionOpen={isUserSectionOpen}>
         <Container>
             <PlayBooksBlock readingBooks={USER_THANH_PHAM.readingBooks}/>
             <Typography.Heading3>Next Books</Typography.Heading3>

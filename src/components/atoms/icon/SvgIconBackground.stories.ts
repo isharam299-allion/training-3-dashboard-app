@@ -20,32 +20,32 @@ type Story = StoryObj<typeof meta>;
   
 export const MenuIconBg: Story= {
 args: { 
-    iconType: ICON_TYPE.MENU_ICON
+    $iconType: ICON_TYPE.MENU_ICON
 }};
 
 export const SearchIconBg: Story = {
 args: { 
-    iconType: ICON_TYPE.SEARCH_ICON
+    $iconType: ICON_TYPE.SEARCH_ICON
 }};
 
 export const NextBackIconBg: Story = {
 args: { 
-    iconType: ICON_TYPE.NEXT_BACK_ICON
+    $iconType: ICON_TYPE.NEXT_BACK_ICON
 }};
 
 export const PlayPauseIconBg: Story = {
 args: { 
-    iconType: ICON_TYPE.PLAY_PAUSE_ICON
+    $iconType: ICON_TYPE.PLAY_PAUSE_ICON
 }};
 
 export const FlagIconBg: Story = {
 args: { 
-    iconType: ICON_TYPE.FLAG_ICON
+    $iconType: ICON_TYPE.FLAG_ICON
 }};
 
 export const ReadInfoIconBg: Story = {
 args: { 
-    iconType: ICON_TYPE.READ_INFO_ICON
+    $iconType: ICON_TYPE.READ_INFO_ICON
 }};
 
 

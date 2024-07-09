@@ -3,7 +3,7 @@ import { ICON_TYPE } from "./SvgIcon";
 import { tokens } from "../../tokens/DesignTokens";
 
 interface IconBackgroundProps {
-    iconType : ICON_TYPE
+    $iconType : ICON_TYPE
 }
 
 const getSize = (type : ICON_TYPE) => {
@@ -46,15 +46,15 @@ const getFillColor = (type : ICON_TYPE) => {
        }
 }
 
-const StyledIconBackground = styled.div<Pick<IconBackgroundProps ,'iconType'>>`
+const StyledIconBackground = styled.div<Pick<IconBackgroundProps ,'$iconType'>>`
         display: flex;
         justify-content: center;
         align-items: center;
-        width: ${props => getSize(props.iconType)};
-        height: ${props => getSize(props.iconType)};
-        border-radius: ${props => getBorderRadius(props.iconType)};
+        width: ${props => getSize(props.$iconType)};
+        height: ${props => getSize(props.$iconType)};
+        border-radius: ${props => getBorderRadius(props.$iconType)};
         border: none;
-        background: ${props => getFillColor(props.iconType)};
+        background: ${props => getFillColor(props.$iconType)};
 `;
 
 export {StyledIconBackground};

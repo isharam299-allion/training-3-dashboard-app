@@ -16,5 +16,5 @@ type Story = StoryObj<typeof meta>;
   
 export const UserBookSection: Story = {
     args: { 
-       isUserSectionOpen: true
+       $isUserSectionOpen: true
 }};

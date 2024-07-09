@@ -43,7 +43,7 @@ const WeekReadBooksBlock : React.FC<WeekReadBooksProps> =({readingCount, readCou
                 <IMAGES.WEEK_READ_BOOKS_IMG/>
             </StyledSvgImgWrapper> 
         </TitleWrapper>
-       <ProgressCircle progressFactor={readCount/readingCount} size={65} strokeSize={5}>
+       <ProgressCircle $progressFactor={readCount/readingCount} size={65} $strokeSize={5}>
             <Typography.WeekBookCount>{readCount}/{readingCount}</Typography.WeekBookCount>
        </ProgressCircle>
     </StyledDiv>

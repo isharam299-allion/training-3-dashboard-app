@@ -117,12 +117,12 @@ const UserName = styled.h2`
     padding-bottom: 6px;
 `;
 
-const NavLink = styled.a<{isActive: boolean}>`
+const NavLink = styled.a<{$isActive: boolean}>`
     font-size: ${tokens.fontSizes.fsExtraSmall14};
     font-weight: ${tokens.fontWeights.semiBold};
     line-height: ${tokens.lineHeights.lineHeight19};
     text-align: left;
-    color : ${props => props.isActive ? tokens.colors.bgColorWhite : tokens.colors.fontColorMenu};
+    color : ${props => props.$isActive ? tokens.colors.bgColorWhite : tokens.colors.fontColorMenu};
     text-decoration: none;
     cursor : pointer;
     &&: hover {
