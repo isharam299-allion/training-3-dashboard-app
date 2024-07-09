@@ -9,7 +9,7 @@ interface NextBookProps {
 
 const StyledDiv = styled.div`
     display: flex;
-    align-items: center;
+    align-items: flex-start;
     justify-content: space-between;
     padding: 5px;
     padding-right: 15px;
@@ -23,13 +23,15 @@ const StyledDiv = styled.div`
 const TitleWrapper = styled.div`
     display: flex;
     flex-direction: column;
+    align-items: flex-start;
     justify-content: center;
     margin-left: 15px;
+    margin-top: 12px;
 `;
 
 const Wrapper = styled.div`
     display: flex;
-    align-items: center;
+    align-items: flex-start;
     justify-content: left;
 `;
 

@@ -42,7 +42,7 @@ import { useState } from "react";
 
         @media (min-width: 391px) {
             margin-top: 190px;
-            gap: 15px;
+            gap: 14px;
         }
     `;
 
@@ -52,19 +52,19 @@ import { useState } from "react";
         height 184px;
         align-items: center;
         justify-content: center;
-        position: fixed;
         bottom: 0px;
         margin-left: 46px;
         margin-right: 26px;
         margin-bottom: 10px;
-        margin-top: 215px;
+        margin-top: 206px;
 
         @media (min-width: 391px) {
             width: 154px;
             height 224px;
             margin-bottom: 35px;
-            margin-left: 36px;
+            margin-left: 35px;
             margin-right: 26px;
+            margin-top: 206px;
         }
     `; 
 

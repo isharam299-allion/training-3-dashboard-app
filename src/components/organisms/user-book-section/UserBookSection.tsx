@@ -26,7 +26,7 @@ const StyledSection = styled.aside<Pick<UserBookSectionProps, 'isUserSectionOpen
     transition: transform 0.3s ease;
 
     @media (min-width: 391px) {
-        height: 100vh;
+        height: auto;
         transform: ${ props => (props.isUserSectionOpen ? 'translateY(0)' : 'translateY(-100%)')};
         transition: transform 0.3s ease;
     }
@@ -51,13 +51,13 @@ const UserBooksSection : React.FC<UserBookSectionProps> = ({isUserSectionOpen}) 
     <StyledSection isUserSectionOpen={isUserSectionOpen}>
         <Container>
             <PlayBooksBlock readingBooks={USER_THANH_PHAM.readingBooks}/>
-            <Typography.Heading3>Next Book</Typography.Heading3>
+            <Typography.Heading3>Next Books</Typography.Heading3>
             <BookWrapper>
                 <NextBook  book={FAULT_IN_OUR_STARS}/>
                 <NextBook  book={NEVER_EAT_ALONE}/>
                 <NextBook  book={THE_BOOK_THEIF}/>
             </BookWrapper>
-            <Typography.Heading3>Daily Works</Typography.Heading3>
+            <Typography.Heading3>Daily Work</Typography.Heading3>
             <WeekReadBooksBlock readCount={3} readingCount={5}/>
         </Container>
         

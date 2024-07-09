@@ -25,8 +25,10 @@ const StyledDiv = styled.div`
 const TextWrapper = styled.div`
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: flex-start;
     text-align: left;
+    padding-left: 2px;
+    padding-top: 4px;
 `;
 
 const ReadInfoBlock : React.FC<ReadInfoProps> = ({count, icon, title}) => (

@@ -33,7 +33,7 @@ const StyledWrapper = styled.div`
     display: flex;
     align-items: center;
     justify-content: space-between;
-    gap: 15px;
+    gap: 16px;
 `;
 
 const UserName = styled(Typography.UserName)`

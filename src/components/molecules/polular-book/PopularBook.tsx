@@ -7,7 +7,7 @@ const StyledDiv = styled.div`
     align-items : center;
     flex-direction : column;
     justify-content : center;
-    width : fit-content;
+    width: 126px;
 `;
 
 interface BookProps {

@@ -25,7 +25,7 @@ const StyledSection = styled.section<Pick<MainSectionProps, 'isMenuOpen' | 'isUs
     
     @media (min-width: 391px) {
         max-width: 1440px;
-        margin-left: ${ props => (props.isMenuOpen ? '247px' : '20px')};
+        margin-left: ${ props => (props.isMenuOpen ? '240px' : '20px')};
         margin-right: ${ props => (props.isUserSectionOpen ? '413px' : '20px')};
         transition: margin 0.3s ease;
     }
@@ -42,9 +42,8 @@ const ReadInfosWrapper = styled.div`
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    max-width: 390px;
     align-items: center;
-    gap: 15px;
+    gap: 27px;
 
     @media(min-width: 391px) {
         max-width: 781px;
@@ -65,7 +64,7 @@ const readinfoList : ReadInfoProps[] = [
         icon: SvgIconAssests.SVG_COMPONENTS.AUTHORS_SVG
     },
     {
-        count: "5",
+        count: "03",
         title: "Reading Books",
         icon: SvgIconAssests.SVG_COMPONENTS.READING_BOOKS_ICON_SVG
     }

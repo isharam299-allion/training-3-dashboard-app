@@ -12,6 +12,7 @@ const StyledDiv = styled.div`
     flex-direction: column;
     max-width: 390px;
     margin-top: 20px;
+    margin-bottom: 13px; 
 
     @media (min-width: 391px) {
         width: 775px;
@@ -22,16 +23,14 @@ const StyledDiv = styled.div`
 const HeadingWrapper = styled.div`
     display: flex;
     align-items: center;
-    justify-content: bottom;
-    gap: 30px
+    gap: 33px
 `;
 
 const AuthorsWrapper = styled.div`
     display: flex;
     justify-content: space-between;
     align-items: center;
-    gap: 40px;
-    margin: 15px 0px 19px 0px;
+    margin: 18px 6px 19px 4px;
 `;
 
 
@@ -41,7 +40,7 @@ const TopAuthorBlock: React.FC<TopAuthorsProps> = ({ authorList }) => {
     return(<StyledDiv>
         <HeadingWrapper>
             <Typography.Heading2>Top Authors</Typography.Heading2>
-            <Typography.Hyperlink>View All</Typography.Hyperlink>
+            <Typography.Hyperlink>View all</Typography.Hyperlink>
         </HeadingWrapper>
         <AuthorsWrapper>
             {

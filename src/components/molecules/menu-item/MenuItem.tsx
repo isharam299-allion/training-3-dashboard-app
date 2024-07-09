@@ -13,11 +13,11 @@ interface MenuItemProp {
 const StyledListItem = styled.li<Pick<MenuItemProp, 'isActive'>>`
     display: flex;
     align-items: center;
-    gap: 26px;
+    gap: 20px;
     width: 172px;
     height: 50px;
     border-radius: 30px;
-    padding: 13px;
+    padding: 7px;
     list-style-type : none;
     background: ${props => props.isActive ? tokens.colors.bgColorOrange : ''};
 `;

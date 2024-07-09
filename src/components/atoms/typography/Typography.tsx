@@ -67,6 +67,7 @@ const Hyperlink = styled.a`
     font-weight: ${tokens.fontWeights.semiBold};
     line-height: 24.55px;
     text-align: right;
+    padding-top: 5px;
 `;
 
 const PopularBookTitle = styled.h4`
@@ -75,7 +76,7 @@ const PopularBookTitle = styled.h4`
     font-weight:  ${tokens.fontWeights.bold};
     line-height: ${tokens.lineHeights.lineHeight22};
     text-align: center;
-    margin: 10px 0px 0px 0px;
+    margin: 6px 0px 0px 0px;
 `;
 
 const PopularBookAuthor = styled.h5`
@@ -84,14 +85,14 @@ const PopularBookAuthor = styled.h5`
     font-weight: ${tokens.fontWeights.regular};
     line-height: ${tokens.lineHeights.lineHeight22};
     text-align: center;
-    margin: 8px 0px 0px 0px;
+    margin: 5px 0px 0px 0px;
 `;
 
 const TopAuthorName = styled.h4`
     font-size: ${tokens.fontSizes.fsSemiSmall16};
     font-weight: ${tokens.fontWeights.semiBold};
     text-align: center;
-    margin: 15px 0px 0px 0px;
+    margin: 10px 0px 0px 0px;
     line-height : ${tokens.lineHeights.lineHeight22};
 `;
 
@@ -102,6 +103,8 @@ const Language = styled.h2`
     letter-spacing: ${tokens.letterSpacing.ls3};
     text-align: left;
     color : ${tokens.colors.fontColorUserName};
+    margin: 0px;
+    padding-bottom: 8px;
 `;
 
 const UserName = styled.h2`
@@ -110,6 +113,8 @@ const UserName = styled.h2`
     line-height: ${tokens.lineHeights.lineHeight23};
     text-align: left;
     color : ${tokens.colors.fontColorUserName};
+    margin: 0px;
+    padding-bottom: 6px;
 `;
 
 const NavLink = styled.a<{isActive: boolean}>`
@@ -131,7 +136,7 @@ const HeadingParagraph = styled.p`
     line-height: ${tokens.lineHeights.lineHeight24};
     color : ${tokens.colors.fontColorParagraph};
     text-align: left;
-    margin: 20px 0px;
+    margin: 20px 0px 23px 0px;
     padding: 0;
 `;
 
@@ -160,7 +165,9 @@ const NextBookTitle = styled.h4`
     font-weight:  ${tokens.fontWeights.bold};
     line-height: ${tokens.lineHeights.lineHeight22};
     text-align: left;
+    padding: 0px;
     margin: 0px;
+    margin-bottom: 5px;
 `;
 
 const NextBookAuthor = styled.h5`
@@ -181,12 +188,13 @@ const NextBookDuration = styled.h5`
     line-height: ${tokens.lineHeights.lineHeight19};
     text-align: right;
     margin: 0px;
+    margin-top: 22px;
 `;
 
 const WeekBookTitle = styled.h4`
     font-family: ${tokens.fontFamily.fontFamilyNunito};
     color : ${tokens.colors.strokeColorGreen}; 
-    font-size:     font-size: ${tokens.fontSizes.fsLarge20};
+    font-size: ${tokens.fontSizes.fsLarge20};
     font-weight:  ${tokens.fontWeights.semiBold};
     line-height: ${tokens.lineHeights.lineHeight27};
     text-align: left;

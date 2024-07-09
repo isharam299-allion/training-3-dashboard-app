@@ -24,7 +24,7 @@ const PlayBooksWrapper = styled.div`
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 26px 20px 20px 20px ;
+    padding: 27px 20px 20px 19px ;
     background-image: url(${Backgrounds.BACKGROUNDS.PlayBookPetalbBg});
     background-size: contain; 
     background-repeat: no-repeat;
@@ -48,7 +48,7 @@ const ButtonWrapper = styled.div`
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding : 15px 62px 0px 62px;
+    padding : 16px 62px 0px 62px;
 `;
 
 const PlayBooksBlock : React.FC<PlayBooksProps> = ({ readingBooks}) => {
@@ -107,7 +107,7 @@ return(
             <StyledIconBackground iconType={ICON_TYPE.NEXT_BACK_ICON} onClick={previousBookOnClick}>
                 <SvgIcon  SvgComponent={SvgIconAssests.SVG_COMPONENTS.BACK_SVG} type={ICON_TYPE.NEXT_BACK_ICON} />
             </StyledIconBackground>
-            <ProgressCircle progressFactor={.75} size={50} strokeSize={4}>
+            <ProgressCircle progressFactor={.62} size={46} strokeSize={4}>
                 <SvgIcon  SvgComponent={SvgIconAssests.SVG_COMPONENTS.PAUSE_ICON_SVG} type={ICON_TYPE.PLAY_PAUSE_ICON} />
             </ProgressCircle>
            

@@ -22,7 +22,7 @@ const StyledContainer = styled.div`
         flex-direction: row-reverse;
         width: 775px;
         height: 280px;
-        padding: 35px 50px 30px 50px;
+        padding: 26px 50px 30px 50px;
     }
 `;
 
@@ -34,7 +34,7 @@ const StyledTextWrapper = styled.div`
     margin-top: 10px;
 
     @media(min-width: 391px){
-        margin: 0px;
+        margin-top: 8px;
     }
 `;
 

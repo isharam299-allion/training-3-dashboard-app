@@ -12,7 +12,7 @@ const StyledDiv = styled.div`
     flex-direction: column;
     width: auto;
     max-width: 390px;
-    margin-top: 30px;
+    margin-top: 28px;
 
     @media (min-width: 391px) {
         width: 775px;
@@ -23,7 +23,6 @@ const StyledDiv = styled.div`
 const HeadingWrapper = styled.div`
     display: flex;
     align-items: center;
-    justify-content: bottom;
     gap: 30px
 `;
 
@@ -31,8 +30,7 @@ const BooksWrapper = styled.div`
     display: flex;
     justify-content: space-between;
     align-items: center;
-    gap: 40px;
-    margin: 15px 0px 19px 0px;
+    margin: 17px 7px 16px 0px;
 `;
 
 

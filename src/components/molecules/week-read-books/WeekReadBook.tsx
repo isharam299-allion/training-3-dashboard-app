@@ -32,7 +32,7 @@ const StyledSvgImgWrapper = styled.div`
         align-items: center;
         justify-content: center;
         margin-top: 10px;
-        margin-right: 7px;
+        margin-right: 24px;
 `; 
 
 const WeekReadBooksBlock : React.FC<WeekReadBooksProps> =({readingCount, readCount}) => (
@@ -43,7 +43,7 @@ const WeekReadBooksBlock : React.FC<WeekReadBooksProps> =({readingCount, readCou
                 <IMAGES.WEEK_READ_BOOKS_IMG/>
             </StyledSvgImgWrapper> 
         </TitleWrapper>
-       <ProgressCircle progressFactor={readCount/readingCount} size={70} strokeSize={5}>
+       <ProgressCircle progressFactor={readCount/readingCount} size={65} strokeSize={5}>
             <Typography.WeekBookCount>{readCount}/{readingCount}</Typography.WeekBookCount>
        </ProgressCircle>
     </StyledDiv>

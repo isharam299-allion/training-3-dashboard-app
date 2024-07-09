@@ -9,7 +9,7 @@ const StyledInput = styled.input`
     border-radius: 30px;
     border: none;
     background-color: ${tokens.colors.bgColorSearchBar};
-    margin: 12px auto 12px 12px;
+    margin: 6px auto 12px 12px;
     padding: 0;
 
     &::placeholder {
@@ -19,7 +19,7 @@ const StyledInput = styled.input`
 
     @media (min-width: 391px) {
         max-width: 492px;
-        margin: 12px auto 12px 25px;
+        margin: 6px auto 12px 27px;
         &:: placeholder {
             display: flex;
         }
