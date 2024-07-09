@@ -29,7 +29,7 @@ const StyledContainer = styled.div`
 const StyledTextWrapper = styled.div`
     display: flex;
     flex-direction: column;
-    width: 312px;
+    width: 314px;
     height: 220px;
     margin-top: 10px;
 

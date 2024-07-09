@@ -10,7 +10,7 @@ const StyledDiv = styled.div`
     width: 109px;
 
     @media (min-width: 391px) {
-        width: 126px;
+        width: 127px;
     }
 `;
 

@@ -30,7 +30,7 @@ const AuthorsWrapper = styled.div`
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin: 18px 6px 19px 4px;
+    margin: 15px 6px 19px 4px;
     gap: 35px;
 `;
 
