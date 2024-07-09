@@ -32,7 +32,7 @@ const StyledSvgImgWrapper = styled.div`
         align-items: center;
         justify-content: center;
         margin-top: 10px;
-        margin-right: 24px;
+        margin-right: 56px;
 `; 
 
 const WeekReadBooksBlock : React.FC<WeekReadBooksProps> =({readingCount, readCount}) => (

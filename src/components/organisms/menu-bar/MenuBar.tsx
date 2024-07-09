@@ -16,8 +16,7 @@ import { useState } from "react";
         bottom: 0;
         flex-direction: column;
         width: 212px;
-        height: 100vh;
-        min-height: 700px;
+        max-height: 1024px;
         border-radius: 40px 0px 0px 40px;
         background-color: ${tokens.colors.bgColorWhite};
         transform: ${ props => (props.isMenuOpen ? 'translateX(0)' : 'translateX(-100%)')};
@@ -56,7 +55,7 @@ import { useState } from "react";
         margin-left: 46px;
         margin-right: 26px;
         margin-bottom: 10px;
-        margin-top: 206px;
+        margin-top: 50px;
 
         @media (min-width: 391px) {
             width: 154px;
