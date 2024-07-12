@@ -8,6 +8,7 @@ import { ReadInfoBlock } from "./read-info/ReadInfoBlock";
 import { NextBook } from "./next-book/NextBook";
 import { WeekReadBooksBlock } from "./week-read-books/WeekReadBook";
 import { PlayBooksBlock } from "./play-book-block/PlayBookBlock";
+import { BookItem } from "./book-item/BookItem";
 
 export {
     PopularBook ,
@@ -19,5 +20,6 @@ export {
     ReadInfoBlock,
     NextBook,
     WeekReadBooksBlock,
-    PlayBooksBlock
+    PlayBooksBlock,
+    BookItem
 }
