@@ -4,6 +4,8 @@ import React, { useState } from "react";
 import { ICON_TYPE, StyledIconBackground, StyledInput, SvgIcon } from "../../atoms";
 import { SVG_COMPONENTS } from "../../../assests/svg-icons";
 import { useBookSearch } from "../../../custom-hooks/UseBookSearch";
+import { useNavigate } from "react-router-dom";
+import { Book } from "../../../utilities/Book.data";
 
 const StyledDiv = styled.div`
     display: flex;
@@ -26,9 +28,14 @@ const SearchSvgIconBackground = styled(StyledIconBackground)`
     cursor : pointer;
 `;
 
-const SearchBox : React.FC = () => {
+interface SearchBarProps{
+    setSearchBooks  : (searchBooks : Book[]) => void;
+}
+
+const SearchBox : React.FC<SearchBarProps> = ({setSearchBooks}) => {
     const [query, setQuery] = useState<string>('');
     const  filteredBooks = useBookSearch(query);
+    const navigate = useNavigate();
 
     const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
         setQuery(e.target.value);
@@ -36,10 +43,15 @@ const SearchBox : React.FC = () => {
 
     console.log(filteredBooks);
 
+    const handleSearch = () => {
+        navigate(`/search/`);
+        setSearchBooks(filteredBooks);
+    }
+
     return (
         <StyledDiv>
             <StyledInput placeholder="Search your book..." type="text" value={query} onChange={handleInputChange}/>
-            <SearchSvgIconBackground $iconType={ICON_TYPE.SEARCH_ICON}>
+            <SearchSvgIconBackground $iconType={ICON_TYPE.SEARCH_ICON} onClick={handleSearch}>
                 <SvgIcon type={ICON_TYPE.SEARCH_ICON} SvgComponent={SVG_COMPONENTS.SEARCH_ICON_SVG} />
             </SearchSvgIconBackground>
         </StyledDiv>

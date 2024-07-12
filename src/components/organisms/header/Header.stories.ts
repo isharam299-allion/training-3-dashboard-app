@@ -18,5 +18,6 @@ type Story = StoryObj<typeof meta>;
 export const HeaderBlock: Story = {
     args: { 
         onClickLogo: fn(),
-        onClickUserIcon: fn()
+        onClickUserIcon: fn(),
+        setFilteredBooks: fn()
 }};

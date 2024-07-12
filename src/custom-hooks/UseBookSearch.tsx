@@ -1,4 +1,4 @@
-import { useCallback, useEffect, useState } from "react"
+import { useEffect, useState } from "react"
 import { ALL_BOOKS, Book } from "../utilities/Book.data"
 
 const useBookSearch = (query: string) => {

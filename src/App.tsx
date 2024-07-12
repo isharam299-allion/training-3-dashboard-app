@@ -1,10 +1,11 @@
 import { useEffect, useState } from 'react';
 import './App.css';
 import { GlobalStyles } from './components/atoms/typography/Typography';
-import { Header, MainSection, MenuBar, UserBooksSection } from './components/organisms';
+import { BookList, Header, MainSection, MenuBar, UserBooksSection } from './components/organisms';
 import styled from 'styled-components';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import { HomeContent } from './components/templates';
+import { Book } from './utilities/Book.data';
 
 const Container = styled.div`
   position: relative;
@@ -19,6 +20,7 @@ const Container = styled.div`
 function App() {
   const [isMenuOpen , setMenuOpen] = useState(window.innerWidth > 390);
   const [isUserSectionOpen, setUserSectionOpen] = useState(window.innerWidth > 390);
+  const [filteredBooks, setFilteredBooks] = useState<Book[]>([]);
 
   useEffect(() => {
     const handleResize = () => {
@@ -44,12 +46,14 @@ function App() {
         <GlobalStyles/>
         <Container>
           <Header onClickLogo={() => setMenuOpen(!isMenuOpen)}  
-            onClickUserIcon={() => setUserSectionOpen(!isUserSectionOpen)}/>
+            onClickUserIcon={() => setUserSectionOpen(!isUserSectionOpen)}
+            setFilteredBooks={setFilteredBooks}/>
           <MenuBar $isMenuOpen={isMenuOpen}/>
           <UserBooksSection $isUserSectionOpen={isUserSectionOpen}/>
           <MainSection $isMenuOpen={isMenuOpen} $isUserSectionOpen={isUserSectionOpen}>
             <Routes>
-              <Route path='/' Component={HomeContent} />
+              <Route path='/' element={<HomeContent/>} />
+              <Route path='/search' element={<BookList books={filteredBooks} />} />
             </Routes>
           </MainSection>
         </Container>

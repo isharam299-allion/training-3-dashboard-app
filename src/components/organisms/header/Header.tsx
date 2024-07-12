@@ -4,6 +4,7 @@ import { ICON_TYPE, Logo, StyledIconBackground, SvgIcon, Typography } from "../.
 import { SearchBox, UserMenu } from "../../molecules";
 import { SvgFlagAssests, SvgIconAssests } from "../../../assests";
 import { USER_THANH_PHAM } from "../../../utilities/User.data";
+import { Book } from "../../../utilities/Book.data";
 
 const StyledHeader = styled.header`
     display : flex;
@@ -83,16 +84,17 @@ const StyledSearchBoxWrapper = styled.div`
 interface HeaderProps {
     onClickLogo : () => void;
     onClickUserIcon : () => void;
+    setFilteredBooks: (books : Book[]) => void;
 }
 
-const Header : React.FC<HeaderProps> = ({onClickLogo, onClickUserIcon}) => (
-    <StyledHeader>
+const Header : React.FC<HeaderProps> = ({onClickLogo, onClickUserIcon, setFilteredBooks}) => (
+        <StyledHeader>
         <LogoWrapper>
             <Logo onClickLogo={onClickLogo}/>
         </LogoWrapper>
         
         <StyledSearchBoxWrapper>
-            <SearchBox/>
+            <SearchBox setSearchBooks={setFilteredBooks}/>
             <StyledLanguageDiv>
                 <Typography.Language>EN</Typography.Language>
                 <StyledIconBackground $iconType={ICON_TYPE.FLAG_ICON}>
@@ -110,5 +112,6 @@ const Header : React.FC<HeaderProps> = ({onClickLogo, onClickUserIcon}) => (
         
     </StyledHeader>
 );
+
 
 export {Header}

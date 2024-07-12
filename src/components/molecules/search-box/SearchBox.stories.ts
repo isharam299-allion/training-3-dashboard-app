@@ -1,5 +1,6 @@
 import type { Meta, StoryObj } from '@storybook/react';
 import { SearchBox } from './SearchBox';
+import { fn } from '@storybook/test';
 
 const meta = {
     title: 'Components/Molecules/SearchBox',
@@ -16,5 +17,5 @@ type Story = StoryObj<typeof meta>;
   
 export const SearchBooksBox: Story = {
     args: { 
-       
+      setSearchBooks : fn()
 }};
