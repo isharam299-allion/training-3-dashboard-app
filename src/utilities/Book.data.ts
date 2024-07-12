@@ -90,8 +90,7 @@ const POPULAR_BOOKS : Book[] = [
     SHERLOCK_HOMES
 ]
 
-export {
-    CONAN_DOYLE,
+const ALL_BOOKS : Book[] = [
     FAULT_IN_OUR_STARS,
     WONDER,
     SHERLOCK_HOMES,
@@ -99,7 +98,18 @@ export {
     THE_GREAT_GASBY,
     SAPIENS,
     NEVER_EAT_ALONE,
-    POPULAR_BOOKS
+]
+
+export {
+    FAULT_IN_OUR_STARS,
+    WONDER,
+    SHERLOCK_HOMES,
+    THE_BOOK_THEIF,
+    THE_GREAT_GASBY,
+    SAPIENS,
+    NEVER_EAT_ALONE,
+    POPULAR_BOOKS,
+    ALL_BOOKS
 };
 
 export type { Book };

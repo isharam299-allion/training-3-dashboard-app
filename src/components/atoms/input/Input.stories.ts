@@ -1,5 +1,5 @@
 import type { Meta, StoryObj } from '@storybook/react';
-import { StyledInput } from './SearchInput';
+import { StyledInput } from './Input';
 
 const meta = {
     title: 'Components/Atoms/Input',

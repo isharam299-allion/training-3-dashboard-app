@@ -21,7 +21,8 @@ export const InactiveHomeMenuItem: Story = {
         $isActive: false,
         content : 'Home',
         MenuIconSvg : SvgIconAssests.SVG_COMPONENTS.HOME_SVG,
-        onClick : fn()
+        onClick : fn(),
+        navPath : ''
 }};
 
 export const ActiveHomeMenuItem: Story = {
@@ -29,7 +30,8 @@ export const ActiveHomeMenuItem: Story = {
         $isActive: true,
         content : 'Home',
         MenuIconSvg : SvgIconAssests.SVG_COMPONENTS.HOME_ACTIVE_SVG,
-        onClick : fn()
+        onClick : fn(),
+        navPath : ''
 }};
 
 export const InactiveFavouriteMenuItem: Story = {
@@ -37,7 +39,8 @@ export const InactiveFavouriteMenuItem: Story = {
         $isActive: false,
         content : 'Favorite',
         MenuIconSvg : SvgIconAssests.SVG_COMPONENTS.HEART_ICON_SVG,
-        onClick : fn()
+        onClick : fn(),
+        navPath : ''
 }};
 
 export const ActiveFavotiteMenuItem: Story = {
@@ -45,7 +48,8 @@ export const ActiveFavotiteMenuItem: Story = {
         $isActive: true,
         content : 'Favorite',
         MenuIconSvg : SvgIconAssests.SVG_COMPONENTS.HEART_ACTIVE_ICON_SVG,
-        onClick : fn()
+        onClick : fn(),
+        navPath : ''
 }};
 
 export const InactiveCategoryMenuItem: Story = {
@@ -53,7 +57,8 @@ export const InactiveCategoryMenuItem: Story = {
         $isActive: false,
         content : 'Categories',
         MenuIconSvg : SvgIconAssests.SVG_COMPONENTS.CATEGORY_SVG,
-        onClick : fn()
+        onClick : fn(),
+        navPath : ''
 }};
 
 export const ActiveCategoryMenuItem: Story = {
@@ -61,7 +66,8 @@ export const ActiveCategoryMenuItem: Story = {
         $isActive: true,
         content : 'Categories',
         MenuIconSvg : SvgIconAssests.SVG_COMPONENTS.CATEGORY_ACTIVE_SVG,
-        onClick : fn()
+        onClick : fn(),
+        navPath : ''
 }};
 
 export const InactiveFolderMenuItem: Story = {
@@ -69,7 +75,8 @@ export const InactiveFolderMenuItem: Story = {
         $isActive: false,
         content : 'Your Library',
         MenuIconSvg : SvgIconAssests.SVG_COMPONENTS.FOLDER_ICON_SVG,
-        onClick : fn()
+        onClick : fn(),
+        navPath : ''
 }};
 
 export const ActiveFolderMenuItem: Story = {
@@ -77,7 +84,8 @@ export const ActiveFolderMenuItem: Story = {
         $isActive: true,
         content : 'Your Library',
         MenuIconSvg : SvgIconAssests.SVG_COMPONENTS.FOLDER_ACTIVE_ICON_SVG,
-        onClick : fn()
+        onClick : fn(),
+        navPath : ''
 }};
 
 export const InactiveSettingMenuItem: Story = {
@@ -85,7 +93,8 @@ export const InactiveSettingMenuItem: Story = {
         $isActive: false,
         content : 'Settings',
         MenuIconSvg : SvgIconAssests.SVG_COMPONENTS.SETTING_ICON_SVG,
-        onClick : fn()
+        onClick : fn(),
+        navPath : ''
 }};
 
 export const ActiveSettingMenuItem: Story = {
@@ -93,7 +102,8 @@ export const ActiveSettingMenuItem: Story = {
         $isActive: true,
         content : 'Settings',
         MenuIconSvg : SvgIconAssests.SVG_COMPONENTS.SETTING_ACTIVE_ICON_SVG,
-        onClick : fn()
+        onClick : fn(),
+        navPath : ''
 }};
 
 export const InactiveLogoutMenuItem: Story = {
@@ -101,7 +111,8 @@ export const InactiveLogoutMenuItem: Story = {
         $isActive: false,
         content : 'Logout',
         MenuIconSvg : SvgIconAssests.SVG_COMPONENTS.LOGOUT_ICON_SVG,
-        onClick : fn()
+        onClick : fn(),
+        navPath : ''
 }};
 
 export const ActiveLogoutMenuItem: Story = {
@@ -109,7 +120,8 @@ export const ActiveLogoutMenuItem: Story = {
         $isActive: true,
         content : 'Logout',
         MenuIconSvg : SvgIconAssests.SVG_COMPONENTS.LOGOUT_ACTIVE_ICON_SVG,
-        onClick : fn()
+        onClick : fn(),
+        navPath : ''
 }};
 
 

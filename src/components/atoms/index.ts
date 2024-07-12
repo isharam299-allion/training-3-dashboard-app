@@ -3,7 +3,7 @@ import * as Typography from './typography/Typography';
 import {Thumbnail, IMAGE_TYPE} from "./thumbnail/Thumbnail";
 import { SvgIcon , ICON_TYPE } from "./icon/SvgIcon";
 import { StyledIconBackground } from "./icon/IconBackground";
-import { StyledInput } from "./input/SearchInput";
+import { StyledInput } from "./input/Input";
 import { UserProfileImg } from "./user-profile-img/UserProfileImg";
 import { Button } from "./button/Button";
 import { ProgressCircle } from "./progress-circle/ProgressCircle";

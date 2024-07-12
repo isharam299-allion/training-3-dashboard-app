@@ -8,6 +8,7 @@ interface MenuItemProp {
     content : string;
     MenuIconSvg : React.FC;
     onClick : () => void;
+    navPath : string;
 }
 
 const StyledListItem = styled.li<Pick<MenuItemProp, '$isActive'>>`
@@ -22,12 +23,12 @@ const StyledListItem = styled.li<Pick<MenuItemProp, '$isActive'>>`
     background: ${props => props.$isActive ? tokens.colors.bgColorOrange : ''};
 `;
 
-const MenuItem : React.FC<MenuItemProp> = ({content, MenuIconSvg , $isActive: isActive , onClick}) => (
+const MenuItem : React.FC<MenuItemProp> = ({content, MenuIconSvg , $isActive: isActive , onClick , navPath}) => (
     <StyledListItem $isActive={isActive} onClick={onClick}>
         <StyledIconBackground $iconType={ICON_TYPE.MENU_ICON} >
             <SvgIcon SvgComponent={MenuIconSvg} type={ICON_TYPE.MENU_ICON}/>
         </StyledIconBackground>
-        <Typography.NavLink $isActive={isActive}>{content}</Typography.NavLink>
+        <Typography.NavLink $isActive={isActive} to={navPath}>{content}</Typography.NavLink>
     </StyledListItem>
 );
 

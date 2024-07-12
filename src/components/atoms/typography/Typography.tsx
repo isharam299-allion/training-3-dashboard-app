@@ -1,5 +1,6 @@
 import{styled, createGlobalStyle} from "styled-components";
 import { tokens } from "../../tokens/DesignTokens";
+import { Link } from "react-router-dom";
 
 const GlobalStyles = createGlobalStyle`
 
@@ -117,7 +118,7 @@ const UserName = styled.h2`
     padding-bottom: 6px;
 `;
 
-const NavLink = styled.a<{$isActive: boolean}>`
+const NavLink = styled(Link)<{$isActive: boolean}>`
     font-size: ${tokens.fontSizes.fsExtraSmall14};
     font-weight: ${tokens.fontWeights.semiBold};
     line-height: ${tokens.lineHeights.lineHeight19};

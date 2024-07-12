@@ -74,32 +74,39 @@ import { useState } from "react";
             SvgIcon: React.FC;
             SvgActiveIcon : React.FC;
             isActive : boolean;
+            navPath: string;
         }
 
         const navLinks : NavItem[] = [
             {
                 isActive: activeIndex === 0, content: "Home", SvgIcon: SvgIconAssests.SVG_COMPONENTS.HOME_SVG,
-                SvgActiveIcon: SvgIconAssests.SVG_COMPONENTS.HOME_ACTIVE_SVG
+                SvgActiveIcon: SvgIconAssests.SVG_COMPONENTS.HOME_ACTIVE_SVG,
+                navPath: "/"
             },
             {
                 isActive: activeIndex === 1, content: "Categories", SvgIcon: SvgIconAssests.SVG_COMPONENTS.CATEGORY_SVG,
-                SvgActiveIcon: SvgIconAssests.SVG_COMPONENTS.CATEGORY_ACTIVE_SVG
+                SvgActiveIcon: SvgIconAssests.SVG_COMPONENTS.CATEGORY_ACTIVE_SVG,
+                navPath: "/categories"
             },
             {
                 isActive: activeIndex === 2, content: "Favorite", SvgIcon: SvgIconAssests.SVG_COMPONENTS.HEART_ICON_SVG,
-                SvgActiveIcon: SvgIconAssests.SVG_COMPONENTS.HEART_ACTIVE_ICON_SVG
+                SvgActiveIcon: SvgIconAssests.SVG_COMPONENTS.HEART_ACTIVE_ICON_SVG,
+                navPath: "/favorite"
             },
             {
                 isActive: activeIndex === 3, content: "Your Library", SvgIcon: SvgIconAssests.SVG_COMPONENTS.FOLDER_ICON_SVG,
-                SvgActiveIcon: SvgIconAssests.SVG_COMPONENTS.FOLDER_ACTIVE_ICON_SVG
+                SvgActiveIcon: SvgIconAssests.SVG_COMPONENTS.FOLDER_ACTIVE_ICON_SVG,
+                navPath: "/library"
             },
             {
                 isActive: activeIndex === 4, content: "Setting", SvgIcon: SvgIconAssests.SVG_COMPONENTS.SETTING_ICON_SVG,
-                SvgActiveIcon: SvgIconAssests.SVG_COMPONENTS.SETTING_ACTIVE_ICON_SVG
+                SvgActiveIcon: SvgIconAssests.SVG_COMPONENTS.SETTING_ACTIVE_ICON_SVG,
+                navPath: "/setting"
             },
             {
                 isActive: activeIndex === 5, content: "Logout", SvgIcon: SvgIconAssests.SVG_COMPONENTS.LOGOUT_ICON_SVG,
-                SvgActiveIcon: SvgIconAssests.SVG_COMPONENTS.LOGOUT_ACTIVE_ICON_SVG
+                SvgActiveIcon: SvgIconAssests.SVG_COMPONENTS.LOGOUT_ACTIVE_ICON_SVG,
+                navPath: "/logout"
             }
 
         ]
@@ -114,7 +121,8 @@ import { useState } from "react";
                             content={link.content} 
                             $isActive={link.isActive} 
                             MenuIconSvg={link.isActive ? link.SvgActiveIcon :link.SvgIcon}
-                            onClick={() => setActiveIndex(index)}/>
+                            onClick={() => setActiveIndex(index)}
+                            navPath={link.navPath}/>
                         ))
                     }
                 </StyledNav>
