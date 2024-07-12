@@ -19,7 +19,7 @@ const StyledInput = styled.input`
 
     @media (min-width: 391px) {
         max-width: 492px;
-        margin: 6px auto 12px 27px;
+        margin: 6px auto 6px 27px;
         &:: placeholder {
             display: flex;
         }

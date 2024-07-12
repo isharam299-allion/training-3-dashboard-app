@@ -105,7 +105,6 @@ const Language = styled.h2`
     text-align: left;
     color : ${tokens.colors.fontColorUserName};
     margin: 0px;
-    padding-bottom: 8px;
 `;
 
 const UserName = styled.h2`
@@ -115,7 +114,6 @@ const UserName = styled.h2`
     text-align: left;
     color : ${tokens.colors.fontColorUserName};
     margin: 0px;
-    padding-bottom: 6px;
 `;
 
 const NavLink = styled(Link)<{$isActive: boolean}>`
